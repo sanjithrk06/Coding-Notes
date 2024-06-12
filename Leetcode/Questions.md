@@ -352,3 +352,116 @@ class Solution {
 }
 ```
 ---
+## 15. [Sort Colors](https://leetcode.com/problems/sort-colors/) (75)
+#array  #twoPointer  #sorting 
+
+```java
+class Solution {
+    public void sortColors(int[] nums) {
+        Arrays.sort(nums);
+    }
+}
+```
+---
+## 16. [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) (33)
+#array #sorting #binarySearch 
+
+```java
+class Solution {
+    public int search(int[] nums, int target) {
+        int len = nums.length;
+        int l = 0, r = len-1, mid;
+  
+        while(l<=r) {
+            mid = (l+r)/2;
+            if(nums[mid] == target) return mid;
+            if (nums[l] <= nums[mid]) {
+                if (nums[l] <= target && target < nums[mid]) r = mid-1;
+                else l = mid+1;
+            } else {
+                if (nums[mid] < target && target <= nums[r]) l = mid+1;
+                else r = mid-1;
+            }
+        }
+  
+        return -1;
+    }
+}
+```
+---
+## 17. [Summary Ranges](https://leetcode.com/problems/summary-ranges/) (228)
+#array #arrayList
+
+```java
+class Solution {
+    public List<String> summaryRanges(int[] nums) {
+        List<String> str = new ArrayList<>();
+        int l = 0, r = 0;
+  
+        for (int i = 1; i <= nums.length; i++) {
+            if (i == nums.length || nums[i] - nums[r] != 1) {
+                if (nums[l] == nums[r]) {
+                    str.add(Integer.toString(nums[l]));
+                    l = i;
+                } else {
+                    str.add(Integer.toString(nums[l])+"->"+Integer.toString(nums[r]));
+                    l = i;
+                }
+            }
+            r = i;
+        }
+        return str;
+    }
+}
+```
+---
+## 18. [Merge Intervals](https://leetcode.com/problems/merge-intervals/) (56)
+#array #sorting 
+
+```java
+class Solution {
+    public int[][] merge(int[][] intervals) {
+        Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
+  
+        List<int[]> res = new ArrayList<>();
+        int[] prev = intervals[0];
+  
+        for (int i = 1; i < intervals.length; i++) {
+            int[] interval = intervals[i];
+            if (interval[0] <= prev[1]) {
+                prev[1] = Math.max(prev[1], interval[1]);
+            } else {
+                res.add(prev);
+                prev = interval;
+            }
+        }
+  
+        res.add(prev);
+  
+        return res.toArray(new int[res.size()][]);        
+    }
+}
+```
+---
+## 19.  [Distance Between Bus Stops](https://leetcode.com/problems/distance-between-bus-stops/) (1184)
+#array 
+
+```java
+class Solution {
+    public int distanceBetweenBusStops(int[] distance, int start, int destination) {
+        int dis1 = 0;
+        int dis2 = 0;
+        int k = destination;
+        for(int i = 0; i < distance.length; i++){
+            if(start <= i && i < k || start > i && i >= k){
+                dis1 += distance[i];
+            }else{
+                dis2 += distance[i];
+            }
+        }
+        if(dis1 > dis2) return dis2;
+        return dis1;
+    }
+}
+```
+---
