@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "e8b97d995cc1e00f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Daily Work Logs.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Leetcode/Questions.md",
+                "file": "Daily Work Logs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Leetcode/Questions.md",
+                "file": "Daily Work Logs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Leetcode/Questions.md"
+                "file": "Daily Work Logs.md"
               }
             }
           }
@@ -160,11 +172,13 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "046c7275c5339342",
+  "active": "e8b97d995cc1e00f",
   "lastOpenFiles": [
-    "Daily Work Logs.md",
+    "Projects/Ezlil/Schema Design.md",
     "Leetcode/Questions.md",
-    "Untitled",
+    "Projects/Ezlil",
+    "Projects",
+    "Daily Work Logs.md",
     "Programs/Untitled.md",
     "Welcome.md",
     "Leetcode",

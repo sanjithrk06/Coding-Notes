@@ -465,3 +465,73 @@ class Solution {
 }
 ```
 ---
+## 20. [Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers/) (628)
+#array #math #sorting 
+
+```java
+class Solution {
+    public int maximumProduct(int[] nums) {
+        Arrays.sort(nums);
+  
+        int len = nums.length;
+  
+        return Math.max(nums[len-1]*nums[len-2]*nums[len-3], nums[0]*nums[1]*nums[len-1]);
+    }
+}
+```
+---
+## 21.  [Largest Number At Least Twice of Others](https://leetcode.com/problems/largest-number-at-least-twice-of-others/) (747)
+#array #sorting 
+
+```java
+class Solution {
+    public int dominantIndex(int[] nums) {
+        int max1 = Integer.MIN_VALUE, max2 = Integer.MIN_VALUE, ind = 0;
+  
+        for(int i=0; i<nums.length; i++) {
+            if(i==0 || nums[i] > max1) {
+                max2 = max1;
+                max1 = nums[i];
+                ind = i;
+            }else if (nums[i] > max2) {
+                max2 = nums[i];
+            }
+        }
+  
+        if(max2*2 <= max1) return ind;
+  
+        return -1;
+    }
+}
+```
+---
+## 22. [Monotonic Array](https://leetcode.com/problems/monotonic-array/) (896)
+#array 
+
+```java
+class Solution {
+    public boolean isMonotonic(int[] nums) {
+        int n = nums.length;
+        if (n == 1) return true;
+  
+        boolean isInc = true;
+        boolean isDec = true;
+  
+        for (int i = 1; i < n; i++) {
+            if (!isInc && !isDec) {
+                return false;
+            }
+  
+            if (nums[i] < nums[i - 1]) {
+                isInc = false;
+            }
+            if (nums[i] > nums[i - 1]) {
+                isDec = false;
+            }
+        }
+  
+        return isInc || isDec;        
+    }
+}
+```
+---
