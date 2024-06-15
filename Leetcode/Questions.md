@@ -535,3 +535,62 @@ class Solution {
 }
 ```
 ---
+## 23. [Minimum Number of Moves to Seat Everyone](https://leetcode.com/problems/minimum-number-of-moves-to-seat-everyone/) (2037)
+#array #sorting 
+
+```java
+class Solution {
+    public int minMovesToSeat(int[] seats, int[] students) {
+        Arrays.sort(seats);
+        Arrays.sort(students);
+  
+        int moves = 0;
+        for(int i=0; i<seats.length; i++) {
+            moves += Math.abs(seats[i] - students[i]);
+        }
+  
+        return moves;
+    }
+}
+```
+
+---
+## 24. [Assign Cookies](https://leetcode.com/problems/assign-cookies/) (455)
+#array  #sorting 
+
+```java
+class Solution {
+    public int findContentChildren(int[] g, int[] s) {
+        Arrays.sort(g);
+        Arrays.sort(s);
+        int j = 0, gLen = g.length, sLen = s.length;
+        for(int i = 0; i < sLen; i++){
+            if(j < gLen && g[j] <= s[i]){
+                j++;
+            }
+        }
+        return j;
+    }
+}
+```
+
+---
+## 25. [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) (121)
+#array 
+
+```java
+class Solution {
+    public int maxProfit(int[] prices) {
+        int buy = prices[0], len = prices.length, max = 0;
+  
+        for(int i=1; i<len; i++) {
+            if(buy > prices[i]) buy = prices[i];
+            max = Math.max(max, prices[i] - buy);
+        }
+  
+        return max;
+    }
+}
+```
+
+---

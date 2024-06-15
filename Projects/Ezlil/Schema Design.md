@@ -73,7 +73,7 @@
 |  7   | Total Price                                                                   | Number             | -          | Y        | -      | -                     |
 |  8   | Total Discounted Price                                                        | Number             | -          | Y        | -      | -                     |
 |  9   | Discount                                                                      | Number             | -          | Y        | -      | -                     |
-|  10  | Order Status                                                                  | Number             | -          | Y        | -      | -                     |
+|  10  | Order Status                                                                  | String             | -          | Y        | -      | -                     |
 |  11  | Total Item                                                                    | Number             | -          | Y        | -      | -                     |
 
 ---
