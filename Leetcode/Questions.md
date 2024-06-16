@@ -594,3 +594,54 @@ class Solution {
 ```
 
 ---
+## 26. [Rectangle Area](https://leetcode.com/problems/rectangle-area/) (223)
+#math #geometry
+
+```java
+class Solution {
+    public int computeArea(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, int bx2, int by2) {
+        int areaA, areaB;
+  
+        areaA = (ax2-ax1) * (ay2-ay1);
+        areaB = (bx2-bx1) * (by2-by1);
+  
+        if(ax2<bx1 && ay2<by1) {
+            return areaA + areaB;
+        }
+  
+        int l, w, areaM = 0;
+  
+        l = Math.min(ax2, bx2) - Math.max(ax1, bx1);
+        w = Math.min(ay2, by2) - Math.max(ay1, by1);
+  
+        if (l>0 && w>0) {
+            areaM = l*w;
+        }
+  
+        return areaA + areaB - areaM;
+    }
+}
+```
+
+---
+## 27. [Power of Three](https://leetcode.com/problems/power-of-three/) (326)
+#math #recursion
+
+```java
+class Solution {
+    public boolean isPowerOfThree(int n) {
+        if (n%3 != 0 && n!=1) return false;
+        double t = n;
+  
+        while(t>=3){
+            t /= 3;
+        }
+  
+        if(t==1.00) return true;
+  
+        return false;
+    }
+}
+```
+
+---

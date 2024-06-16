@@ -1,6 +1,18 @@
 ---
 
 ---
+## Day 5
+**Date : 16.06.24**
+
+- Solving Leetcode Problems.
+- Top 50 Math algorithms.
+---
+## Day 4
+**Date : 15.06.24**
+
+- Solving Leetcode Problems.
+- Studying for semester. 
+---
 ## Day 3
 **Date : 14.06.2024**
 
