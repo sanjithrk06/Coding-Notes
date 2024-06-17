@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Daily Work Logs.md",
+                "file": "Leetcode/Questions.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Daily Work Logs.md",
+                "file": "Leetcode/Questions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Daily Work Logs.md",
+                "file": "Leetcode/Questions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Daily Work Logs.md"
+                "file": "Leetcode/Questions.md"
               }
             }
           }
@@ -174,11 +174,11 @@
   },
   "active": "a3a4041fd88d5a78",
   "lastOpenFiles": [
+    "Daily Work Logs.md",
     "Top 50 Questions/Mathematical Algorithms.md",
     "Untitled.md",
     "Leetcode/Questions.md",
     "Top 50 Questions",
-    "Daily Work Logs.md",
     "Github.md",
     "Projects/Ezlil/Schema Design.md",
     "Projects/Ezlil",

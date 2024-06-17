@@ -645,3 +645,40 @@ class Solution {
 ```
 
 ---
+## 28. [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) (58)
+#string
+
+```java
+class Solution {
+    public int lengthOfLastWord(String s) {
+        s = s.trim();
+        int len = 0;
+        for (int i = s.length() - 1; i >= 0; i--) {
+            if (s.charAt(i) != ' ') len++;
+            else if (len > 0) break;
+        }
+        return len;
+    }
+}
+```
+
+---
+## 29. [Ugly Number](https://leetcode.com/problems/ugly-number/) (263)
+#math  
+
+```java
+class Solution {
+    public boolean isUgly(int n) {
+        if (n<1) return false;
+  
+        while(n%2==0) n/=2;
+        while(n%3==0) n/=3;
+        while(n%5==0) n/=5;
+  
+        if (n==1) return true;
+        return false;
+    }
+}
+```
+
+---
