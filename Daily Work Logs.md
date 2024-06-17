@@ -1,6 +1,12 @@
 ---
 
 ---
+## Day 6
+**Date : 17.06.24**
+
+- Solving Leetcode Problems.
+- Studying for semester. 
+---
 ## Day 5
 **Date : 16.06.24**
 
