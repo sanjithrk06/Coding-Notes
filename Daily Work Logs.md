@@ -1,6 +1,13 @@
 ---
 
 ---
+## Day 8
+**Date : 19.06.24**
+
+- Solving Leetcode Problems.
+- Learned some java concepts(String Builders).
+- Studying for semester. 
+---
 ## Day 7
 **Date : 18.06.24**
 

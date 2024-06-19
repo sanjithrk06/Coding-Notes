@@ -717,3 +717,100 @@ class Solution {
 ```
 
 ---
+## 31. [Valid Anagram](https://leetcode.com/problems/valid-anagram/) (242)
+#string 
+
+```java
+class Solution {
+    public boolean isAnagram(String s, String t) {
+        char[] sArr = s.toCharArray();
+        char[] tArr = t.toCharArray();
+        Arrays.sort(sArr);
+        Arrays.sort(tArr);
+  
+        return Arrays.equals(sArr, tArr);
+    }
+}
+```
+
+---
+## 32. [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/) (349)
+#array #hashSet #sorting 
+
+```java
+class Solution {
+    public int[] intersection(int[] nums1, int[] nums2) {
+        Set<Integer> res = new HashSet<Integer>();
+  
+        for(int i=0; i<nums1.length; i++) {
+            for(int j =0; j<nums2.length; j++) {
+                if(nums1[i] == nums2[j]) {
+                    res.add(nums1[i]);
+                    break;
+                }
+            }
+        }
+  
+        int[] arr = res.stream().mapToInt(Integer::intValue).toArray();
+  
+        return arr;
+    }
+}
+```
+
+---
+
+## 33. [Check if Array Is Sorted and Rotated](https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/) (1752)
+#array 
+
+**My Solution :**
+```java
+class Solution {
+    public boolean check(int[] nums) {
+        int k = nums.length-1;
+  
+        for(int i=1; i<nums.length; i++) {
+            if(nums[k] >= nums[i] && nums[i-1]>nums[i]) {
+                k = i;
+            }
+        }
+  
+        for(int i=0; i<nums.length-1; i++) {
+            int ind = (k+i)%nums.length;
+            int nxt = (k+i+1)%nums.length;
+            if(nums[ind] > nums[nxt]) {
+                return false;
+            }
+        }
+  
+        return true;
+    }
+}
+```
+
+**Best Solution :**
+```java
+class Solution {
+    public boolean check(int[] nums) {
+        int ans = 0, size = nums.length;
+  
+        if (nums[0] < nums[size - 1]) {
+            ans++;
+        }
+  
+        for (int i = 1; i < size; i++) {
+            if (nums[i - 1] > nums[i]) {
+                ans++;
+  
+                if (ans > 1) {
+                    return false;
+                }
+            }
+        }
+  
+        return true;
+    }
+}
+```
+
+---
