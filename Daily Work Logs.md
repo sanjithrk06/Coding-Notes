@@ -1,6 +1,12 @@
 ---
 
 ---
+## Day 10
+**Date : 21.06.24**
+
+- Solving Leetcode Problems.
+- Studying for semester. 
+---
 ## Day 9
 **Date : 20.06.24**
 
