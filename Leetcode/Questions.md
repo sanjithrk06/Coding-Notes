@@ -883,3 +883,51 @@ class Solution {
 ```
 
 ---
+## 38. [Rearrange Array Elements by Sign](https://leetcode.com/problems/rearrange-array-elements-by-sign/) (2149)
+#array #twoPointer 
+
+```java
+class Solution {
+    public int[] rearrangeArray(int[] nums) {
+        ArrayList<Integer> posArr = new ArrayList<Integer>();
+        ArrayList<Integer> negArr = new ArrayList<Integer>();
+  
+        for(int i=0; i<nums.length; i++) {
+            if(nums[i]>0) posArr.add(nums[i]);
+            else negArr.add(nums[i]);
+        }
+  
+        int p=0, n=0;
+  
+        for(int i=0; i<nums.length; i++) {
+            if(i==0 || i%2==0) nums[i] = posArr.get(p++);
+            else nums[i] = negArr.get(n++);
+        }
+  
+        return nums;
+    }
+}
+```
+
+**Best Approach :**
+```java
+class Solution {
+    public int[] rearrangeArray(int[] nums) {
+        int even = 0, odd = 1;
+        int[] ans = new int[nums.length];
+  
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] < 0){
+                ans[odd] = nums[i];
+                odd += 2;
+            }else{
+                ans[even] = nums[i];
+                even += 2;
+            }
+        }
+        return ans;
+    }
+}
+```
+
+---

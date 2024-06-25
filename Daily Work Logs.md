@@ -1,6 +1,12 @@
 ---
 
 ---
+## Day 14
+**Date : 25.06.24**
+
+- Solving Leetcode Problems.
+- Studying for semester. 
+---
 ## Day 13
 **Date : 24.06.24**
 
