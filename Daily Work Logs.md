@@ -1,6 +1,12 @@
 ---
 
 ---
+## Day 16
+**Date : 27.06.24**
+
+- Solving Leetcode Problems.
+- Creating (Auth, User, Cart, Cart Items) Services & Controllers.
+---
 ## Day 15
 **Date : 26.06.24**
 

@@ -952,3 +952,37 @@ class Solution {
 ```
 
 ---
+## 40. [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) (74)
+#array  #binarySearch 
+
+```java
+class Solution {
+    public boolean searchMatrix(int[][] matrix, int target) {
+        if(target<matrix[0][0]) return false;
+  
+        int ind = 0;
+        for(int i=0; i<matrix.length; i++) {
+            if(i==matrix.length-1 && target >=matrix[i][0]) {
+                ind = i;
+                break;
+            }else if(target >= matrix[i][0] && target < matrix[i+1][0]) {
+                ind = i;
+                break;
+            }
+        }
+  
+        int l=0, r=matrix[ind].length-1;
+  
+        while(l<=r) {
+            int mid = (l+r)/2;
+  
+            if(matrix[ind][mid]==target) return true;
+            else if(target > matrix[ind][mid]) l=mid+1;
+            else if(target < matrix[ind][mid]) r = mid-1;
+        }
+  
+        return false;
+    }
+}
+```
+---
