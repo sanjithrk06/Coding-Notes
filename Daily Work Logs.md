@@ -5,7 +5,7 @@
 **Date : 27.06.24**
 
 - Solving Leetcode Problems.
-- Creating (Auth, User, Cart, Cart Items) Services & Controllers.
+- Creating (Auth, User, Cart, Cart Items) Services & Controllers for Ezlil.
 ---
 ## Day 15
 **Date : 26.06.24**
