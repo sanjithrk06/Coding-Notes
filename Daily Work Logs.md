@@ -1,6 +1,12 @@
 ---
 
 ---
+## Day 17
+**Date : 28.06.24**
+
+- Solving Leetcode Problems.
+- Creating Orders Services for Ezlil.
+---
 ## Day 16
 **Date : 27.06.24**
 

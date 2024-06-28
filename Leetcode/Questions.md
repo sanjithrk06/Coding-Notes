@@ -986,3 +986,30 @@ class Solution {
 }
 ```
 ---
+## 41. [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) (41)
+#array 
+
+```java
+class Solution {
+    public int firstMissingPositive(int[] nums) {
+        Arrays.sort(nums);
+        int ind=-1;
+  
+        for(int i=0; i<nums.length; i++) {
+            if(nums[i] == 1) {
+                ind = i;
+                break;
+            }else if(i==nums.length-1) return 1;
+        }
+        int k=1;
+        for(int i=0; i<nums.length-ind; i++){
+            if(nums[i+ind] < k) continue;
+            else if(nums[i+ind] != k) return k;
+            k++;
+        }
+  
+        return nums[nums.length-1]+1;
+    }
+}
+```
+---

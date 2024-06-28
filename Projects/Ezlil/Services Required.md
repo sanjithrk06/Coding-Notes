@@ -6,7 +6,7 @@
 > **User Services**
 - Create User (`createUser`),
 - Find User By Id (`findUserById`),
-- Find User By Email (`findUserByEmail`),
+- Get User By Email (`getUserByEmail`),
 - Get User Profile By Token (`getUserProfileByToken`),
 - Get all users (`getAllUsers`)
 
@@ -20,6 +20,14 @@
 - Register / Sign up
 - Login / Sign in
 ---
+> [!Cart]
+
+> Cart Services
+- Create Cart (`createCart`),
+- Find User Cart (`findUserCart`),
+- Add Cart Item (`addCartItem`),
+---
+> [!Cart ]
 
 
 
