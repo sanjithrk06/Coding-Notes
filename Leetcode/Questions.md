@@ -1013,3 +1013,30 @@ class Solution {
 }
 ```
 ---
+## 42. [Majority Element](https://leetcode.com/problems/majority-element/) (169)
+#array 
+
+```java
+class Solution {
+    public int majorityElement(int[] nums) {
+        Arrays.sort(nums);
+  
+        int count=0, maxCount = 0, val = nums[0], maxVal = nums[0];
+        for(int i=1; i<nums.length; i++) {
+            if(nums[i-1] == nums[i]){
+                count++;
+                val = nums[i];
+            }
+            else count =0;
+            if(count>maxCount){
+                maxCount=count;
+                maxVal = val;
+            }
+        }
+  
+        return maxVal;
+    }
+}
+```
+---
+## 43. 
