@@ -1039,4 +1039,29 @@ class Solution {
 }
 ```
 ---
-## 43. 
+## 43. [Majority Element II](https://leetcode.com/problems/majority-element-ii/) (229)
+#array #sorting #counting
+
+```java
+class Solution {
+    public List<Integer> majorityElement(int[] nums) {
+        ArrayList<Integer> res = new ArrayList<Integer>();
+        Arrays.sort(nums);
+  
+        int count=0, tar = nums.length/3;
+        for(int i=0; i<nums.length; i++) {
+            if(i==0 || nums[i-1] == nums[i]){
+                count++;
+            }
+            else count =1;
+            if(count>tar && !res.contains(nums[i])) {
+                res.add(nums[i]);
+            }
+        }
+  
+        return res;
+    }
+}
+```
+---
+## 44. 

@@ -1,6 +1,12 @@
 ---
 
 ---
+## Day 19
+**Date : 02.07.24**
+
+- Solving Leetcode Problems.
+- Studying for semester.
+---
 ## Day 18
 **Date : 01.07.24**
 
