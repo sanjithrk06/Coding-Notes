@@ -1,4 +1,4 @@
-
+**([[#THE END|Navigate to End]])**
 ## 1. [Two Sum](https://leetcode.com/problems/two-sum/) (1)
 #array
 
@@ -1064,4 +1064,40 @@ class Solution {
 }
 ```
 ---
-## 44. 
+## 44. [Insert Interval](https://leetcode.com/problems/insert-interval/) (57)
+#array #sorting 
+
+```java
+class Solution {
+    public int[][] insert(int[][] intervals, int[] newInterval) {
+        ArrayList<int[]> arr = new ArrayList<int[]>();
+        boolean flag = false;
+  
+        for(int i=0; i<intervals.length; i++){
+            int[] interval = intervals[i];
+  
+            if(newInterval[0] > interval[1]) {
+                arr.add(interval);
+            }else if(newInterval[1] < interval[0]){
+                if(!flag) {
+                    arr.add(newInterval);
+                    flag=true;
+                }
+                arr.add(interval);
+            }else {
+                newInterval[0] = Math.min(newInterval[0], interval[0]);
+                newInterval[1] = Math.max(newInterval[1], interval[1]);
+            }
+        }
+  
+        if(!flag) arr.add(newInterval);
+  
+        return arr.toArray(new int[arr.size()][]);
+    }
+}
+```
+---
+## 45.
+
+---
+### THE END

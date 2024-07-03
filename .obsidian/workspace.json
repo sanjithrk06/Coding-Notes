@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "c16309d02d00e390",
+        "id": "48a116c11c0ac681",
         "type": "tabs",
         "children": [
           {
-            "id": "91d296664c63354f",
+            "id": "c7b7ae653532b22f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Leetcode/Questions.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6b3ba72ac6d611cf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Projects/Ezlil/Services Required.md",
                 "mode": "source",
                 "source": false
               }
@@ -159,14 +147,14 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "91d296664c63354f",
+  "active": "c7b7ae653532b22f",
   "lastOpenFiles": [
-    "Github.md",
-    "Leetcode/Questions.md",
     "Projects/Ezlil/Services Required.md",
     "Projects/Ezlil/Functionalities(Services & Controllers).md",
-    "Daily Work Logs.md",
     "Projects/Ezlil/Schema Design.md",
+    "Leetcode/Questions.md",
+    "Github.md",
+    "Daily Work Logs.md",
     "Top 50 Questions/Mathematical Algorithms.md",
     "Untitled.md",
     "Top 50 Questions",

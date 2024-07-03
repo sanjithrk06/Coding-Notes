@@ -1,6 +1,11 @@
 ---
 
 ---
+## Day 20
+**Date : 03.07.24**
+
+- Solving Leetcode Problems.
+---
 ## Day 19
 **Date : 02.07.24**
 
