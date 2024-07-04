@@ -1,4 +1,6 @@
+
 **([[#THE END|Navigate to End]])**
+
 ## 1. [Two Sum](https://leetcode.com/problems/two-sum/) (1)
 #array
 
@@ -1097,7 +1099,33 @@ class Solution {
 }
 ```
 ---
-## 45.
+## 45. [Sqrt(x)](https://leetcode.com/problems/sqrtx/) (69)
+
+```java
+class Solution {
+    public int mySqrt(int x) {
+        if (x == 0) {
+            return 0;
+        }
+        int first = 1, last = x;
+        while (first <= last) {
+            int mid = first + (last - first) / 2;
+            if (mid == x / mid) {
+                return mid;
+            } else if (mid > x / mid) {
+                last = mid - 1;
+            } else {
+                first = mid + 1;
+            }
+        }
+        return last;
+    }
+}
+```
+---
+## 46. 
+
+
 
 ---
 ### THE END

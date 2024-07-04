@@ -1,6 +1,12 @@
 ---
 
 ---
+## Day 21
+**Date : 04.07.24**
+
+- Solving Leetcode Problems.
+- Products, ratings & reviews services completed(Ezlil).
+---
 ## Day 20
 **Date : 03.07.24**
 
