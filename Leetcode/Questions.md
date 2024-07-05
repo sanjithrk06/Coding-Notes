@@ -1123,8 +1123,42 @@ class Solution {
 }
 ```
 ---
-## 46. 
+## 46.  [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/) (350)
+#array #sorting 
 
+```java
+class Solution {
+    public int[] intersect(int[] nums1, int[] nums2) {
+        Arrays.sort(nums1);
+        Arrays.sort(nums2);
+  
+        ArrayList<Integer> res = new ArrayList<>();
+        int i = 0, j = 0;
+        int n1 = nums1.length, n2 = nums2.length;
+  
+        while (i < n1 && j < n2) {
+            if (nums1[i] == nums2[j]) {
+                res.add(nums1[i]);
+                i++;
+                j++;
+            } else if (nums1[i] < nums2[j]) {
+                i++;
+            } else {
+                j++;
+            }
+        }
+  
+        int[] result = new int[res.size()];
+        for (int k = 0; k < res.size(); k++) {
+            result[k] = res.get(k);
+        }
+  
+        return result;
+    }
+}
+```
+---
+## 47. 
 
 
 ---

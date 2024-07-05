@@ -1,6 +1,12 @@
 ---
 
 ---
+## Day 22
+**Date : 05.07.24**
+
+- Solving Leetcode Problems.
+- Cart, Cart Items, Orders, category controller & Category sevice completed(Ezlil).
+---
 ## Day 21
 **Date : 04.07.24**
 
