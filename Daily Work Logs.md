@@ -1,6 +1,11 @@
 ---
 
 ---
+## Day 23
+**Date : 06.07.24**
+
+- Solving Leetcode Problems.
+- Ratings, review, order, products controller & Products route completed(Ezlil).
 ## Day 22
 **Date : 05.07.24**
 
