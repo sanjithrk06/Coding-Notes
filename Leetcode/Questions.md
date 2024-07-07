@@ -1183,9 +1183,23 @@ class Solution {
 }
 ```
 ---
-## 48. 
+## 48. [Maximum Count of Positive Integer and Negative Integer](https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer/)
+#array 
 
-
+```java
+class Solution {
+    public int maximumCount(int[] nums) {
+        int pCount =0, nCount=0;
+  
+        for(int num: nums){
+            if(num>0) pCount++;
+            else if(num<0) nCount++;
+        }
+  
+        return Math.max(pCount, nCount);
+    }
+}
+```
 
 ---
 ### THE END
