@@ -1,6 +1,11 @@
 ---
 
 ---
+## Day 25
+**Date : 08.07.24**
+
+- Solving Leetcode Problems.
+---
 ## Day 24
 **Date : 07.07.24**
 
