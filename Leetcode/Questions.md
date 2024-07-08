@@ -1200,6 +1200,32 @@ class Solution {
     }
 }
 ```
+## 49. [Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/)
+#string #array
+
+```java
+class Solution {
+    public char nextGreatestLetter(char[] letters, char target) {
+        char ind='z';
+        int f=0; 
+        for(char ch: letters) {
+            if((int)ch > (int)target) {
+                if((int)ch <= (int)ind) {
+                    ind = ch;
+                    f=1;
+                }
+            }
+        }
+
+        if(f==0) ind = letters[0];
+
+        return ind;
+    }
+}
+```
+---
+## 50. 
+
 
 ---
 ### THE END
