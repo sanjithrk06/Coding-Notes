@@ -1241,7 +1241,27 @@ class Solution {
 }
 ```
 ---
-## 51.
+## 51. [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) (171)
+#string 
+
+```java
+class Solution {
+    public int titleToNumber(String columnTitle) {
+        int res = 0;
+  
+        for(char str : columnTitle.toUpperCase().toCharArray()) {
+            res *= 26;
+            res += str - 'A' + 1;
+        }
+  
+        return res;
+    }
+}
+```
+---
+## 52. 
+
+
 
 
 ---

@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Leetcode/Questions.md",
+                "file": "Daily Work Logs.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "49ae0796d1c8c86a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Daily Work Logs.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Leetcode/Questions.md",
+                "file": "Daily Work Logs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Leetcode/Questions.md",
+                "file": "Daily Work Logs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Leetcode/Questions.md"
+                "file": "Daily Work Logs.md"
               }
             }
           }
@@ -147,24 +160,28 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "c7b7ae653532b22f",
+  "active": "49ae0796d1c8c86a",
   "lastOpenFiles": [
+    "Problem Solving/Leetcode/Questions.md",
+    "Problem Solving/PS/Level 5.md",
+    "Daily Work Logs.md",
+    "Problem Solving/PS/Level 5",
+    "Problem Solving/PS",
+    "Problem Solving/PS Lvl 5",
+    "Problem Solving/Leetcode",
+    "Problem Solving",
+    "Leetcode/Questions.md",
     "Projects/Ezlil/Services Required.md",
     "Projects/Ezlil/Functionalities(Services & Controllers).md",
     "Projects/Ezlil/Schema Design.md",
-    "Leetcode/Questions.md",
     "Github.md",
-    "Daily Work Logs.md",
     "Top 50 Questions/Mathematical Algorithms.md",
-    "Untitled.md",
     "Top 50 Questions",
     "Projects/Ezlil",
     "Projects",
     "Programs/Untitled.md",
     "Welcome.md",
     "Leetcode",
-    "New folder",
-    "Programs",
-    "attachments"
+    "New folder"
   ]
 }

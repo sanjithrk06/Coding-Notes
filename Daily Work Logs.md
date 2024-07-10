@@ -1,6 +1,7 @@
 ---
 
 ---
+
 ## Day 26
 **Date : 09.07.24**
 
@@ -26,7 +27,7 @@
 **Date : 05.07.24**
 
 - Solving Leetcode Problems.
-- Cart, Cart Items, Orders, category controller & Category sevice completed(Ezlil).
+- Cart, Cart Items, Orders, category controller & Category service completed(Ezlil).
 ---
 ## Day 21
 **Date : 04.07.24**
