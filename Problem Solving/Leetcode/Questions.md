@@ -1294,8 +1294,41 @@ class Solution {
 }
 ```
 ---
-## 53. 
+## 53. [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) (8)
+#string 
 
+```java
+class Solution {
+    public int myAtoi(String s) {
+        int l = s.length();
+        int res = 0, sign = 1, i = 0;
+  
+        while (i < l && s.charAt(i) == ' ') {
+            i++;
+        }
+  
+        if (i < l && (s.charAt(i) == '-' || s.charAt(i) == '+')) {
+            sign = (s.charAt(i) == '-') ? -1 : 1;
+            i++;
+        }
+  
+        while (i < l && Character.isDigit(s.charAt(i))) {
+            int digit = s.charAt(i) - '0';
+  
+            if (res > (Integer.MAX_VALUE - digit) / 10) {
+                return (sign == 1) ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+            }
+  
+            res = res * 10 + digit;
+            i++;
+        }
+  
+        return res * sign;
+    }
+}
+```
+---
+## 54. 
 
 
 ---

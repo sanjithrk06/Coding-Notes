@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tech Notes/Java + DSA/Linear Search.md",
+                "file": "Daily Work Logs.md",
                 "mode": "source",
                 "source": false
               }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tech Notes/Java + DSA/Linear Search.md",
+                "file": "Daily Work Logs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tech Notes/Java + DSA/Linear Search.md",
+                "file": "Daily Work Logs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tech Notes/Java + DSA/Linear Search.md"
+                "file": "Daily Work Logs.md"
               }
             }
           }
@@ -186,9 +186,15 @@
   },
   "active": "56c970ab61c909b6",
   "lastOpenFiles": [
-    "Tech Notes/Java + DSA",
     "Problem Solving/Leetcode/Questions.md",
+    "Projects/Ezlil/Functionalities(Services & Controllers).md",
+    "Projects/Ezlil/Services Required.md",
+    "Projects/Ezlil/Schema Design.md",
+    "Daily Work Logs.md",
+    "Problem Solving/PS/Level 2.md",
+    "Problem Solving/PS/Lvl 2.md",
     "Tech Notes/Java + DSA/Linear Search.md",
+    "Tech Notes/Java + DSA",
     "Tech Notes",
     "Problem Solving/PS/Level 5.md",
     "AWS/Notes.md",
@@ -197,21 +203,16 @@
     "attachments/Pasted image 20240711114951.png",
     "attachments/Pasted image 20240711114526.png",
     "AWS",
-    "Daily Work Logs.md",
     "Problem Solving/PS/Level 5",
     "Problem Solving/PS",
     "Problem Solving/PS Lvl 5",
     "Problem Solving/Leetcode",
     "Problem Solving",
     "Leetcode/Questions.md",
-    "Projects/Ezlil/Services Required.md",
-    "Projects/Ezlil/Functionalities(Services & Controllers).md",
-    "Projects/Ezlil/Schema Design.md",
     "Github.md",
     "Top 50 Questions/Mathematical Algorithms.md",
     "Top 50 Questions",
     "Projects/Ezlil",
-    "Projects",
     "Programs/Untitled.md",
     "Welcome.md"
   ]
