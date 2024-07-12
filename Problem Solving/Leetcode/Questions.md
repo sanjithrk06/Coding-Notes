@@ -1259,8 +1259,42 @@ class Solution {
 }
 ```
 ---
-## 52. 
+## 52. [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) (238)
+#array 
 
+```java
+class Solution {
+    public int[] productExceptSelf(int[] nums) {
+        int[] ans = new int[nums.length];
+        int n= nums.length;
+        int zCount =0, zInd=0, product=1;
+  
+        for(int i=0; i<n; i++){
+            if(nums[i]==0){
+                zCount++;
+                zInd = i;
+            }else {
+                product *= nums[i];
+            }
+        }
+  
+        if(zCount==1){
+            ans[zInd] = product;
+            return ans;
+        }else if(zCount>1){
+            return ans;
+        }else{        
+            for(int i = 0; i < n; i++) {
+                ans[i] = product/nums[i];
+            }
+        }
+  
+        return ans;
+    }
+}
+```
+---
+## 53. 
 
 
 

@@ -25,14 +25,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Daily Work Logs.md",
+                "file": "Problem Solving/PS/Level 5.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bf09d1ef55e709ad",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Problem Solving/Leetcode/Questions.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "56c970ab61c909b6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tech Notes/Java + DSA/Linear Search.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -98,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Daily Work Logs.md",
+                "file": "Tech Notes/Java + DSA/Linear Search.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Daily Work Logs.md",
+                "file": "Tech Notes/Java + DSA/Linear Search.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Daily Work Logs.md"
+                "file": "Tech Notes/Java + DSA/Linear Search.md"
               }
             }
           }
@@ -160,10 +184,19 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "49ae0796d1c8c86a",
+  "active": "56c970ab61c909b6",
   "lastOpenFiles": [
+    "Tech Notes/Java + DSA",
     "Problem Solving/Leetcode/Questions.md",
+    "Tech Notes/Java + DSA/Linear Search.md",
+    "Tech Notes",
     "Problem Solving/PS/Level 5.md",
+    "AWS/Notes.md",
+    "attachments/Pasted image 20240711115901.png",
+    "attachments/Pasted image 20240711115447.png",
+    "attachments/Pasted image 20240711114951.png",
+    "attachments/Pasted image 20240711114526.png",
+    "AWS",
     "Daily Work Logs.md",
     "Problem Solving/PS/Level 5",
     "Problem Solving/PS",
@@ -180,8 +213,6 @@
     "Projects/Ezlil",
     "Projects",
     "Programs/Untitled.md",
-    "Welcome.md",
-    "Leetcode",
-    "New folder"
+    "Welcome.md"
   ]
 }

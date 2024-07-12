@@ -2,6 +2,20 @@
 
 ---
 
+## Day 28
+**Date : 11.07.24**
+
+- Solving Leetcode Problems.
+- PS lvl 5 preparation.
+- AWS Online Conference Module 1.
+---
+## Day 27
+**Date : 10.07.24**
+
+- Solving Leetcode Problems.
+- PS lvl 5 preparation.
+- Changes in tray drop box in Recipe Builder.
+---
 ## Day 26
 **Date : 09.07.24**
 
