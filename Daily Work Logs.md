@@ -2,6 +2,12 @@
 
 ---
 
+## Day 30
+**Date : 13.07.24**
+
+- Solving Leetcode Problems.
+- PS lvl 5 preparation.
+---
 ## Day 29
 **Date : 12.07.24**
 

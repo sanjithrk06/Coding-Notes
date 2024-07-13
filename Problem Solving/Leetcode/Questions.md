@@ -733,6 +733,20 @@ class Solution {
         return Arrays.equals(sArr, tArr);
     }
 }
+
+
+// Best Option
+class Solution {
+    public boolean isAnagram(String s, String t) {
+        if (s.length() != t.length()) return false;
+        int[] m = new int[128];
+        for (char ch : s.toCharArray()) m[ch]++;
+        for (char ch : t.toCharArray()) {
+            if (--m[ch] < 0) return false;
+        }
+        return true;
+    }
+}
 ```
 
 ---
@@ -1328,7 +1342,168 @@ class Solution {
 }
 ```
 ---
-## 54. 
+## 54. [Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) (1295)
+#array 
+
+```java
+class Solution {
+    public int findNumbers(int[] nums) {
+        int count=0;
+  
+        for(int n: nums){
+            if(even(n)) count++;
+        }
+  
+        return count;
+    }
+  
+    boolean even(int num){
+        int digit = digit(num);
+  
+        if(digit%2 == 0) return true;
+  
+        return false;
+    }
+  
+    int digit(int num){
+        return (int)(Math.log10(num)+1);
+    }
+}
+```
+
+---
+## 55. [Group Anagrams](https://leetcode.com/problems/group-anagrams/) (49)
+#sorting  #array #string 
+
+```java
+
+// without using hash map
+class Solution {
+    public List<List<String>> groupAnagrams(String[] strs) {
+        int l = strs.length;
+        int[] flag= new int[l];
+        Arrays.sort(strs);
+  
+        List<List<String>> res = new ArrayList<List<String>>();
+  
+        for(int i=0; i<l; i++){
+            if(flag[i] == 1) continue;
+            List<String> str = new ArrayList<String>();
+            str.add(strs[i]);
+            for(int j=0; j<l; j++){
+                if(j==i) continue;
+                if(isAnagram(strs[i], strs[j])){
+                    str.add(strs[j]);
+                    flag[j] = 1;
+                }
+            }
+            res.add(str);
+        }
+  
+        return res;
+    }
+  
+    boolean isAnagram(String s, String t) {
+        char[] sarr = s.toCharArray();
+        char[] tarr = t.toCharArray();
+        Arrays.sort(sarr);
+        Arrays.sort(tarr);
+  
+        if(sarr.length != tarr.length) return false;
+  
+        for(int i=0; i<sarr.length && i<tarr.length; i++){
+            if(sarr[i]!=tarr[i]){
+                return false;
+            }
+        }
+  
+        return true;
+    }
+}
+
+
+// Using hash map
+class Solution {
+    public List<List<String>> groupAnagrams(String[] strs) {
+        List<List<String>> res = new ArrayList<>();
+        HashMap<String, Integer> hm = new HashMap<>();
+  
+        int ind=0;
+        for(String str : strs){
+            char[] s = str.toCharArray();
+            Arrays.sort(s);
+            String st = new String(s);
+  
+            if(hm.containsKey(st)){
+                res.get(hm.get(st)).add(str);
+            }else{
+                hm.put(st, ind);
+                res.add(new ArrayList<>());
+                res.get(ind).add(str);
+                ind++;
+            }
+        }
+  
+        return res;
+    }
+}
+```
+---
+## 56. [Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/) (2273)
+#array #hashMap #string #anagram
+
+```java
+class Solution {
+    public List<String> removeAnagrams(String[] words) {
+        List<String> res = new ArrayList<>();
+        HashMap<String, Integer> mp = new HashMap<>();
+  
+        int k=0;
+        for(String str : words){
+            char[] s = str.toCharArray();
+            Arrays.sort(s);
+            String st = new String(s);
+  
+            if(mp.containsKey(st)){
+                continue;
+            }else{
+                mp.clear();
+                mp.put(st, k++);
+                res.add(str);
+            }
+        }
+  
+        return res;
+    }
+}
+```
+---
+## 57. [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) (11)
+#array 
+
+```java
+class Solution {
+    public int maxArea(int[] height) {
+        int n=height.length;
+        int l=0, r=n-1, max = Integer.MIN_VALUE;
+
+        while(l<r){
+            int a = Math.min(height[l], height[r]);
+            int area = a*(r-l);
+
+            if(max<area) max = area;
+
+            if(height[l]<height[r]) l++;
+            else r--;
+        }
+
+        return max;
+    }
+}
+```
+---
+## 58. 
+
 
 
 ---
