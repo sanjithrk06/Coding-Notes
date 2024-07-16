@@ -152,3 +152,55 @@ class MinNumber {
 ```
 
 ---
+## Q5. [Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) (1295)
+#array 
+
+```java
+class Solution {
+    public int findumbers(int[] nums) {
+
+        int count=0;
+  
+        for(int n: nums){
+            if(even(n)) count++;
+        }
+  
+        return count;
+    }
+  
+    boolean even(int num){
+        int digit = digit(num);
+  
+        if(digit%2 == 0) return true;
+  
+        return false;
+    }
+  
+    int digit(int num){
+        return (int)(Math.log10(num)+1);
+    }
+}
+```
+---
+## Q6. [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/) (1672)
+#array 
+
+```java
+class Solution {
+    public int maximumWealth(int[][] accounts) {
+        int max = Integer.MIN_VALUE;
+
+        for(int i=0; i<accounts.length; i++){
+            int wealth = 0;
+            for(int j=0; j<accounts[i].length; j++){
+                wealth += accounts[i][j];
+            }
+
+            if(wealth > max) max = wealth;
+        }
+
+        return max;
+    }
+}
+```
+---

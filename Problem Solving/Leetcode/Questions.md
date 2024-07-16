@@ -127,6 +127,7 @@ class Solution {
 #array #binarySearch
 
 ```java
+// Code 1
 class Solution {
     public int searchInsert(int[] nums, int target) {
         int len = nums.length;
@@ -151,6 +152,33 @@ class Solution {
   
         return 0;
     }
+}
+
+// Code 2
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+        int res = insertAt(nums, target);
+
+        return res;
+    }
+
+    int insertAt(int[] arr, int val){
+        int s = 0, e = arr.length - 1;
+
+        if (val <= arr[s]) return 0;
+        else if (val > arr[e]) return arr.length;
+        else if (s==e) return 0;
+
+        while(s<=e){
+            int mid = s + (e-s)/2;
+
+            if(arr[mid] >= val && arr[mid-1] < val) return mid;
+            else if (arr[mid] > val) e = mid-1;
+            else s = mid+1;
+        }
+
+        return -1;
+    }
 }
 ```
 
@@ -1502,7 +1530,191 @@ class Solution {
 }
 ```
 ---
-## 58. 
+## 58. [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/) (1672)
+#array 
+
+```java
+class Solution {
+    public int maximumWealth(int[][] accounts) {
+        int max = Integer.MIN_VALUE;
+
+        for(int i=0; i<accounts.length; i++){
+            int wealth = 0;
+            for(int j=0; j<accounts[i].length; j++){
+                wealth += accounts[i][j];
+            }
+
+            if(wealth > max) max = wealth;
+        }
+
+        return max;
+    }
+}
+```
+---
+## 59. [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) (13)
+#array #string 
+
+```java
+class Solution {
+    public int romanToInt(String s) {
+        char[] str = s.toCharArray();
+
+        int sum = 0;
+        for(int i=0; i<str.length; i++){
+            int s1 = value(str[i]);
+
+            if(i+1 < str.length){
+                int s2 = value(str[i+1]);
+
+                if(s1 < s2){
+                    sum += (s2-s1);
+                    i++;
+                }else{
+                    sum +=s1;
+                }
+            }else{
+                sum+=s1;
+            }
+        }
+
+        return sum;
+    }
+
+    int value(char ch){
+        switch(ch){
+            case 'I': return 1;
+            case 'V': return 5;
+            case 'X': return 10;
+            case 'L': return 50;
+            case 'C': return 100;
+            case 'D': return 500;
+            case 'M': return 1000;
+        }
+
+        return 0;
+    }
+}
+```
+---
+## 60. [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) (12)
+#string #array 
+
+```java
+class Solution {
+    public String intToRoman(int num) {
+        StringBuilder res = new StringBuilder();
+        int[] val = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        String[] sym = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+
+        for(int i=0; i<13; i++){
+            int di = num/val[i];
+            num = num%val[i];
+            while(di>0){
+                res.append(sym[i]);
+                di--;
+            }
+        }
+        return res.toString();
+    }
+}
+```
+---
+## 61. [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) (34)
+#array #sorting #binarySearch 
+
+```java
+class Solution {
+    public int[] searchRange(int[] nums, int target) {
+        int[] res = new int[2];
+        res[0] = binarySearch(nums, target, -1);
+        res[1] = binarySearch(nums, target, 1);
+        return res;
+    }
+
+    int binarySearch(int[] nums, int target, int flag){
+        int len = nums.length;
+        int l=0, r=len-1, ans = -1;
+
+        while(l<=r){
+            int m = l + (r-l)/2;
+
+            if(nums[m]==target){
+                ans = m;
+                if(flag == 1) l = m+1;
+                else r = m-1;
+            }else if(nums[m]>target) r = m-1;
+            else l = m+1;
+        }
+
+        return ans;
+    }
+}
+```
+
+---
+## 62. [Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/) (852)
+#array #binarySearch 
+
+```java
+class Solution {
+    public int peakIndexInMountainArray(int[] arr) {
+        int s = 0, e = arr.length - 1;
+
+        while(s<=e){
+            int m = s+ (e-s)/2;
+
+            if(arr[m] > arr[m+1]){
+                if(arr[m] > arr[m-1]){
+                    return m;
+                }else e = m - 1;
+            }else if(arr[m] < arr[m+1]){
+                s = m + 1;
+            }
+        }
+
+        return -1;
+    }
+}
+```
+---
+## 63. [Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/) (540)
+#array #binarySearch 
+
+```java
+class Solution {
+    public int singleNonDuplicate(int[] nums) {
+        int len = nums.length;
+        if(len==1) return nums[0];
+        if(nums[0]!=nums[1]) return nums[0];
+        if(nums[len-2] != nums[len-1]) return nums[len-1];
+        int s = 0, e = len-1;
+
+        while(s<=e){
+            int m = s + (e-s)/2;
+
+            if(nums[m] == nums[m+1]){
+                if(m%2==0) s = m+1;
+                else e = m-1;
+            }else if(nums[m] == nums[m-1]){
+                if((m-1)%2==0) s = m+1;
+                else e = m-1;
+            }else return nums[m];
+        }
+
+        return nums[0];
+    }
+}
+```
+---
+## 64. 
+
+
+
+
+
+
+
 
 
 

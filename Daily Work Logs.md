@@ -2,6 +2,18 @@
 
 ---
 
+## Day 32
+**Date : 16.07.24**
+
+- Solving Leetcode Problems.
+- Testing the APIs for category, cart, cartItem, orders and bug fixing(Ezlil).
+---
+## Day 31
+**Date : 15.07.24**
+
+- Solving Leetcode Problems.
+- PS lvl 5 preparation.
+---
 ## Day 30
 **Date : 13.07.24**
 

@@ -201,7 +201,7 @@ int main() {
     
     int l=0;
     for(int i=0; i<len1; i++){
-        for(int j=i+1; j<len; j++){
+        for(int j=i+1; j<len1; j++){
             if(tolower(str1[i])> tolower(str1[j])){
                 char temp = str1[i];
                 str1[i] = str1[j];
