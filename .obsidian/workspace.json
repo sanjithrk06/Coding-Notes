@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "255151d317dea2c7",
+        "id": "7f83f2791d65c061",
         "type": "tabs",
         "children": [
           {
-            "id": "ef6410838df5c7fa",
+            "id": "9ad8520dd05f4cb5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Problem Solving/Leetcode/Questions.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a130b5dea44e1fa9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tech Notes/Java + DSA/Searching/Interview Questions.md",
                 "mode": "source",
                 "source": false
               }
@@ -159,14 +147,14 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "ef6410838df5c7fa",
+  "active": "9ad8520dd05f4cb5",
   "lastOpenFiles": [
     "Tech Notes/Java + DSA/Searching/Interview Questions.md",
+    "Projects/Ezlil/Functionalities(Services & Controllers).md",
     "Problem Solving/Leetcode/Questions.md",
     "Problem Solving/PS/Level 5.md",
     "Problem Solving/PS/C Programming.md",
     "Problem Solving/PS/Level 2.md",
-    "Projects/Ezlil/Functionalities(Services & Controllers).md",
     "Projects/Ezlil/Schema Design.md",
     "Projects/Ezlil/Services Required.md",
     "Projects/Ezlil/Routes.md",

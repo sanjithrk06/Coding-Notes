@@ -1707,8 +1707,66 @@ class Solution {
 }
 ```
 ---
-## 64. 
+## 64. [Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/) (81)
+#array #binarySearch 
 
+```java
+class Solution {
+    public boolean search(int[] nums, int target) {
+        int len = nums.length;
+
+        int l = 0, r = len-1;
+
+        while(l<=r){
+            int m = l + (r-l)/2;
+
+            if(nums[m] == target || nums[l] == target || nums[r] == target) return true;
+
+            if(nums[l] == nums[m] && nums[m] == nums[r]){
+                l++;
+                r--;
+                continue;
+            }else if(nums[l] <= nums[m]) {
+                if(nums[l] <= target && target < nums[m]) r = m-1;
+                else l = m + 1;
+            }else {
+                if(nums[m] < target && target <= nums[r]) {
+                    l = m+1;
+                }
+                else r = m-1;
+            }
+        }
+
+        return false;
+    }
+}
+```
+
+---
+## 65. [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) (153)
+#array #binarySearch 
+
+```java
+class Solution {
+    public int findMin(int[] nums) {
+        int n = nums.length;
+        int l=0, r=n-1;
+
+        while(l<=r){
+            int mid = l + (r-l)/2;
+
+            if(nums[mid] <= nums[r]){
+                if(mid == 0 || nums[mid] < nums[mid-1]) return nums[mid];
+                else r = mid-1;
+            }else l = mid+1;
+        }
+
+        return -1;
+    }
+}
+```
+---
+## 66. 
 
 
 

@@ -2,6 +2,12 @@
 
 ---
 
+## Day 33
+**Date : 17.07.24**
+
+- Solving Leetcode Problems.
+- Learnt & implemented Binary search(DSA).
+---
 ## Day 32
 **Date : 16.07.24**
 
