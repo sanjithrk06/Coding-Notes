@@ -1766,7 +1766,209 @@ class Solution {
 }
 ```
 ---
-## 66. 
+## 66. [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) (11)
+#array #binarySearch 
+
+```java
+class Solution {
+    public int shipWithinDays(int[] weights, int days) {
+        int max = Integer.MIN_VALUE, sum = 0;
+
+        for(int i=0; i<weights.length; i++){
+            if(weights[i] > max) max = weights[i];
+            sum += weights[i];
+        }
+
+        if(days==1) return sum;
+
+        int low = max, high = sum, res = sum;
+
+        while(low<=high){
+            int mid = low + (high - low)/2;
+
+            if(isShip(weights, mid, days)){
+                res = mid;
+                high = mid-1;
+            }else low = mid+1;
+        }
+
+        return res;
+    }
+
+    boolean isShip(int[] weights, int max, int days){
+        int count = 0, sum = 0;
+
+        for(int i=0; i<weights.length; i++){
+            if(count >= days) return false;
+            if((sum + weights[i]) > max){
+                sum = 0;
+                count++;
+            }
+            sum += weights[i];
+        }
+        if(count >= days) return false;
+
+        return true;
+    }
+}
+```
+---
+## 67. [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) (875)
+#array #binarySearch 
+
+```java
+class Solution {
+    public int minEatingSpeed(int[] piles, int h) {
+        Arrays.sort(piles);
+        int maxEl = piles[piles.length-1];
+        
+        int l = 1, r = maxEl, res = 0;
+
+        while(l<=r){
+            int m = l + (r-l)/2;
+
+            int totHrs = findHrs(m, piles);
+
+            if(totHrs <= h){
+                res = m;
+                r = m-1; 
+            }else{
+                l = m+1;
+            }
+        }
+
+        return res;
+    }
+
+    int findHrs(int m, int[] piles){
+        int cnt = 0;
+
+        for(int i:piles){
+            cnt += Math.ceil((double) i / m);
+        }
+
+        return cnt;
+    }
+}
+```
+
+---
+## 68. [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) (74)
+#array #binarySearch #2Darray 
+
+```java
+class Solution {
+    public boolean searchMatrix(int[][] matrix, int target) {
+        int l = 0, r = matrix.length-1;
+
+        while(l<=r){
+            int m = l + (r-l)/2;
+
+            if(matrix[m][0] <= target){
+                if(matrix[m][matrix[m].length-1] >= target){
+                    return bs(matrix[m], target);
+                }else{
+                    l = m+1;
+                }
+            }else{
+                r = m-1;
+            }
+        }
+
+        return false;
+    }
+
+    boolean bs(int[] matrix, int target){
+        int l = 0, r = matrix.length-1;
+
+        while(l<=r){
+            int m = l + (r-l)/2;
+
+            if(matrix[m] > target) r = m-1;
+            else if(matrix[m] < target) l = m+1;
+            else return true;
+        }
+
+        return false;
+    }
+}
+```
+
+---
+## 70. [Find in Mountain Array](https://leetcode.com/problems/find-in-mountain-array/) (1095)
+#binarySearch #array 
+
+```java
+/**
+ * // This is MountainArray's API interface.
+ * // You should not implement it, or speculate about its implementation
+ * interface MountainArray {
+ *     public int get(int index) {}
+ *     public int length() {}
+ * }
+ */
+ 
+class Solution {
+    public int findInMountainArray(int target, MountainArray mountainArr) {
+        int peak = peakIndex(mountainArr);
+        if(mountainArr.get(peak) < target) return -1;
+        int len = mountainArr.length();
+
+        int left = binarySearch(target, mountainArr, 0, peak);
+        int right = binarySearch(target, mountainArr, peak+1, len-1);
+
+        if(left < 0 && right >= 0) return right;
+        else if(left >= 0 && right < 0) return left;
+        else if(left >= 0 && right >= 0) return Math.min(left, right);
+
+        return -1;
+    }
+
+    int peakIndex(MountainArray arr){
+        int s = 0, e = arr.length()-1;
+
+        while(s<=e){
+            int m = s + (e-s)/2;
+
+            if(arr.get(m) > arr.get(m+1)){
+                if(arr.get(m-1) < arr.get(m)) return m;
+                else e = m-1;
+            }else s = m+1;
+        }
+
+        return -1;
+    }
+
+    int binarySearch(int target, MountainArray arr, int s, int e){
+        int l = s, r = e;
+
+        if(arr.get(l) >= arr.get(r)){
+            while(l<=r){
+                int m = l + (r-l)/2;
+
+                if(arr.get(m) > target) l = m+1;
+                else if(arr.get(m) < target) r = m-1;
+                else return m;
+            }
+        }else{
+            while(l<=r){
+                int m = l + (r-l)/2;
+
+                if(arr.get(m) > target) r = m-1;
+                else if(arr.get(m) < target) l = m+1;
+                else return m;
+            }
+        }
+
+        return -1;
+    }
+}
+```
+
+---
+## 71. 
+
+
 
 
 

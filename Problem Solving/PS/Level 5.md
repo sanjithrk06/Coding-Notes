@@ -1024,3 +1024,339 @@ int main() {
     return 0;
 }
 ```
+
+---
+## PS Q-1
+
+### Count the diff words
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int count(char str1[], char str2[], int len1,int len2){
+    int max = 0, count = 0;
+    
+    if(len1>len2) max = len1;
+    else max = len2;
+    
+    int flag[len2];
+    
+    for(int i=0; i<len2; i++){
+        flag[i] = 0;
+    }
+    
+    for(int i=0; i<len1; i++){
+        if(flag[i]==0){
+            for(int j=0; j<len2; j++){
+                if(str1[i] == str2[j]){
+                    flag[j] = 1;
+                    count++;
+                    break;
+                }
+            }
+        }
+    }
+    
+    return max-count;
+}
+
+int main() {
+    char str1[100];
+    char str2[100];
+    
+    scanf("%[^\n]%*c", str1);
+    scanf("%[^\n]%*c", str2);
+    
+    int len1 = strlen(str1);
+    int len2 = strlen(str2);
+    
+    printf("%d", count(str1, str2, len1, len2));
+
+    return 0;
+}
+```
+
+**Sample Input :**
+bat
+boat
+
+**Sample output**
+2
+
+---
+## Anagram finder
+
+```c
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>
+
+void sortWord(char* str){
+    int len = strlen(str);
+    
+    for(int i=0; i<len; i++){
+        for(int j=i+1; j<len; j++){
+            if(str[i] > str[j]){
+                char temp = str[i];
+                str[i] = str[j];
+                str[j] = temp;
+            }
+        }
+    }
+}
+
+void printAnagram(int n, char words[n][100]){
+    char sort[n][100];
+    int flag[n];
+    
+    for(int i=0; i<n; i++){
+        strcpy(sort[i], words[i]);
+        sortWord(sort[i]);
+    }
+    
+    for(int i=0; i<n; i++){
+        flag[i] = 0;
+    }
+    
+    for(int i=0; i<n; i++){
+        if(flag[i]!=0) continue;
+        printf("%s", words[i]);
+        
+        for(int j=0; j<n; j++){
+            if(i!=j){
+                if(strcmp(sort[i], sort[j]) == 0){
+                    flag[j] = 1;
+                    printf(" %s", words[j]);
+                }
+            }
+        }
+        
+        printf("\n");
+    }
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    
+    char words[n][100];
+    
+    for(int i=0; i<n; i++){
+        scanf("%s", words[i]);
+    }
+    
+    printAnagram(n, words);
+
+    return 0;
+}
+```
+
+---
+## Circular prime
+
+```c
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+int isPrime(int n){
+    if(n<2) return 0;
+    
+    int sq = sqrt(n);
+    printf("sq : %d\n", sq);
+    
+    for(int i=2; i<=sq; i++){
+        if(n%i==0) return 0;    
+    }
+    
+    return 1;
+}
+
+int getNum(int n){
+    int rem = n%10;
+    int q = n/10;
+    int len = (int)log10(n);
+    int res = rem*(int)pow(10, len) + q;
+    printf("rem : %d q: %d len: %d res: %d\n", rem, q, len, res);
+    return res;
+}
+
+int isCPrime(int num){
+    int dup = num;
+    
+    do{
+        if(isPrime(dup) == 0) return 0;
+        else dup = getNum(dup);
+        printf("dup : %d\n", dup);
+    }while(num!=dup);
+    
+    return 1;
+}
+
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    
+    if(isCPrime(n)==1){
+        printf("True");
+    }else {
+        printf("False");
+    }
+
+    return 0;
+}
+```
+
+---
+
+## Sum Odd using recursion 
+
+```c
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+int sumOdd(int n){
+    int num;
+    
+    if(n<1) return 0;
+    if(n==1) return 1;
+    if(n%2==0){
+        num = n-1;
+    }else{
+        num = n;
+    }
+    
+    return num+sumOdd(num-2);
+}
+
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    
+    // int arr[n];
+    // for(int i=0; i<n; i++){
+    //     scanf("%d", &arr[n]);
+    // }
+    
+    int sum = sumOdd(n);
+    printf("%d", sum);
+    return 0;
+}
+```
+
+---
+## Max 3 product
+
+```c
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+
+int maxPro(int n, int arr[n]){
+    
+    for(int i=0; i<n; i++){
+        for(int j=i+1; j<n; j++){
+            if(arr[i] > arr[j]){
+                int t = arr[i];
+                arr[i] = arr[j];
+                arr[j] = t;
+            }
+        }
+    }
+    
+    int pro1 = arr[n-1]*arr[n-2]*arr[n-3];
+    int pro2 = arr[0]*arr[1]*arr[n-1];
+    printf("pro1 : %d pro2: %d arr[0]: %d\n", pro1, pro2, arr[0]);
+    if(pro1> pro2){
+        return pro1;
+    }else return pro2;
+    
+    return -1;
+}
+
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    
+    int arr[n];
+    for(int i=0; i<n; i++){
+        scanf("%d", &arr[i]);
+        
+    }
+    
+    int max = maxPro(n, arr);
+    
+    printf("%d", max);
+    
+    return 0;
+}
+```
+
+---
+## Pivot 
+
+```c
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+
+int totalsum(int n,int arr[n]){
+    int sum =0;
+    for(int i=0; i<n; i++){
+        sum+=arr[i];
+    }
+    
+    return sum;
+}
+
+int pivot(int n, int arr[n], int tot){
+    
+    int sum = 0;
+    for(int i=0; i<n; i++){
+        sum += arr[i];
+        if(tot==sum){
+            return i;
+        }
+        tot -= arr[i];
+    }
+    
+    return 0;
+}
+
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    
+    int arr[n];
+    for(int i=0; i<n; i++){
+        scanf("%d", &arr[i]);
+        
+    }
+    
+    int tot = totalsum(n, arr);
+    
+    int res = pivot(n, arr, tot);
+    
+    printf("%d", arr[res]);
+    
+    return 0;
+}
+```
+
+---

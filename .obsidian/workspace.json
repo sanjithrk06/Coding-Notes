@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Problem Solving/PS/Level 5.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "37950b10aaab2a0f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Problem Solving/Leetcode/Questions.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -147,13 +160,14 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "9ad8520dd05f4cb5",
+  "active": "37950b10aaab2a0f",
   "lastOpenFiles": [
-    "Tech Notes/Java + DSA/Searching/Interview Questions.md",
-    "Projects/Ezlil/Functionalities(Services & Controllers).md",
-    "Problem Solving/Leetcode/Questions.md",
     "Problem Solving/PS/Level 5.md",
     "Problem Solving/PS/C Programming.md",
+    "Problem Solving/PS/Companies Summary.md",
+    "Problem Solving/Leetcode/Questions.md",
+    "Tech Notes/Java + DSA/Searching/Interview Questions.md",
+    "Projects/Ezlil/Functionalities(Services & Controllers).md",
     "Problem Solving/PS/Level 2.md",
     "Projects/Ezlil/Schema Design.md",
     "Projects/Ezlil/Services Required.md",
