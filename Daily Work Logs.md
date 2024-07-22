@@ -2,6 +2,12 @@
 
 ---
 
+## Day 35
+**Date : 22.07.24**
+
+- Solving Leetcode Problems.
+- Learnt sorting in java & some git concepts.
+---
 ## Day 34
 **Date : 20.07.24**
 

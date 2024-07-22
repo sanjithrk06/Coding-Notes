@@ -1966,7 +1966,85 @@ class Solution {
 ```
 
 ---
-## 71. 
+## 71. [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) (401)
+#array #binarySearch 
+
+```java
+class Solution {
+    public int splitArray(int[] nums, int k) {
+        int start = 0, end = 0;
+
+        for(int num : nums){
+            start = Math.max(num, start);
+            end += num;
+        }
+
+        while(start < end){
+            int mid = start + (end-start)/2;
+
+            int count = 1, sum = 0;
+            for(int num : nums){
+                if(sum + num > mid){
+                    sum = num;
+                    count++;
+                }else sum += num;
+            }
+
+            if(count > k) start = mid + 1;
+            else end = mid;
+        }
+
+        return end;
+    }
+}
+```
+
+---
+## 72. [3Sum](https://leetcode.com/problems/3sum/) (15)
+#array #arrayList 
+
+```java
+class Solution {
+    public List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> res=new ArrayList<>();
+        
+        Arrays.sort(nums);
+        
+        for(int i=0;i<nums.length;i++){
+            if(i>0 && nums[i]==nums[i-1]) continue;
+            
+            int j=i+1;
+            int k=nums.length-1;
+            
+            while(j<k){
+                if(nums[i]+nums[j]+nums[k] > 0){
+                    k--;
+                } else if(nums[i]+nums[j]+nums[k] < 0){
+                    j++;
+                } else{
+                    List<Integer> arr = new ArrayList<Integer>();
+                    arr.add(nums[i]);
+                    arr.add(nums[j]);
+                    arr.add(nums[k]);
+                    res.add(arr);
+                    j++;
+                    k--;
+                    while(j<k&& nums[j]==nums[j-1]) j++;
+                    while(j<k&& nums[k]==nums[k+1]) k--;
+
+                }
+            }
+        }
+        
+        return res;
+    }
+}
+```
+
+---
+## 73. 
+
+
 
 
 

@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "7f83f2791d65c061",
+        "id": "acdd288de570fc5b",
         "type": "tabs",
         "children": [
           {
-            "id": "9ad8520dd05f4cb5",
+            "id": "7f37bc58753e7a9a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Problem Solving/PS/Level 5.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "37950b10aaab2a0f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Problem Solving/Leetcode/Questions.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Problem Solving/Leetcode/Questions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Problem Solving/Leetcode/Questions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Problem Solving/Leetcode/Questions.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -160,17 +139,29 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "37950b10aaab2a0f",
+  "active": "7f37bc58753e7a9a",
   "lastOpenFiles": [
+    "Projects/Ezlil/Functionalities(Services & Controllers).md",
+    "Projects/Ezlil/Services Required.md",
+    "Projects/Ezlil/Schema Design.md",
+    "Problem Solving/Leetcode/Questions.md",
+    "Github.md",
+    "Tech Notes/Git & Github/Git Init.md",
+    "Tech Notes/Git & Github/Git commit & logs.md",
+    "Tech Notes/Git & Github/Git config.md",
+    "Tech Notes/Git & Github/Git merge and conflicts.md",
+    "attachments/Pasted image 20240722160703.png",
+    "attachments/Pasted image 20240722151254.png",
+    "attachments/Pasted image 20240722143743.png",
+    "Tech Notes/Java + DSA/Searching/Interview Questions.md",
+    "Tech Notes/Git & Github",
+    "Tech Notes/Java + DSA/Sorting/Selection sort.md",
+    "Tech Notes/Java + DSA/Sorting/Bubble Sort.md",
     "Problem Solving/PS/Level 5.md",
+    "Tech Notes/Java + DSA/Sorting",
     "Problem Solving/PS/C Programming.md",
     "Problem Solving/PS/Companies Summary.md",
-    "Problem Solving/Leetcode/Questions.md",
-    "Tech Notes/Java + DSA/Searching/Interview Questions.md",
-    "Projects/Ezlil/Functionalities(Services & Controllers).md",
     "Problem Solving/PS/Level 2.md",
-    "Projects/Ezlil/Schema Design.md",
-    "Projects/Ezlil/Services Required.md",
     "Projects/Ezlil/Routes.md",
     "Top 50 Questions/Mathematical Algorithms.md",
     "AWS/Notes.md",
@@ -190,11 +181,7 @@
     "Problem Solving/PS",
     "Problem Solving/PS Lvl 5",
     "Problem Solving/Leetcode",
-    "Problem Solving",
     "Leetcode/Questions.md",
-    "Github.md",
-    "Top 50 Questions",
-    "Programs/Untitled.md",
-    "Welcome.md"
+    "Programs/Untitled.md"
   ]
 }
