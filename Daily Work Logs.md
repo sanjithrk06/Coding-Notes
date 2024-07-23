@@ -2,6 +2,13 @@
 
 ---
 
+## Day 36
+**Date : 23.07.24**
+
+- Solving Leetcode Problems.
+- Learning apti concepts.
+- Adding Forms in Recipe Making Web.
+---
 ## Day 35
 **Date : 22.07.24**
 
