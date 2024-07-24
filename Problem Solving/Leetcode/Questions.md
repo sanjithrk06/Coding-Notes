@@ -2089,7 +2089,172 @@ class Solution {
 ```
 
 ---
-## 74. 
+## 74. [Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/) (448)
+#array #sorting #cyclicSort
+
+```java
+class Solution {
+    public List<Integer> findDisappearedNumbers(int[] nums) {
+        List<Integer> res = new ArrayList<>();
+
+        int i=0;
+        while(i<nums.length){
+            int cInd = nums[i]-1;
+            if(cInd >= nums.length) {
+                i++;
+                continue;
+            }
+            if(nums[i] != nums[cInd]){
+                swap(nums, i, cInd);
+            }else i++;
+        }
+
+        for(int k=0; k<nums.length; k++){
+            if(k+1 != nums[k]) res.add(k+1);
+        }
+
+        return res;
+    }
+
+    void swap(int[] arr, int f, int s){
+        int temp = arr[f];
+        arr[f] = arr[s];
+        arr[s] = temp;
+    }
+}
+```
+---
+## 75. [Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/) (442)
+#array #duplicates #cyclicSort 
+
+```java
+class Solution {
+    public List<Integer> findDuplicates(int[] nums) {
+        int k = 0;
+        while(k<nums.length){
+            int cInd = nums[k]-1;
+            if(cInd >= nums.length) {
+                k++;
+                continue;
+            }
+            if(nums[k] != nums[cInd]){
+                swap(nums, k, cInd);
+            }else k++;
+        }
+
+        List<Integer> res = new ArrayList<>();
+        for(int i=0; i<nums.length; i++){
+            if(i+1 != nums[i]) res.add(nums[i]);
+        }
+
+        return res;
+    }
+
+    void swap(int[] arr, int f, int s){
+        int t = arr[f];
+        arr[f] = arr[s];
+        arr[s] = t;
+    }
+}
+```
+---
+
+## 76. [Set Mismatch](https://leetcode.com/problems/set-mismatch/) (645)
+#array #cyclicSort 
+
+```java
+class Solution {
+    public int[] findErrorNums(int[] nums) {
+        int k = 0;
+        while(k<nums.length){
+            int cInd = nums[k]-1;
+            if(cInd >= nums.length) {
+                k++;
+                continue;
+            }
+            if(nums[k] != nums[cInd]){
+                swap(nums, k, cInd);
+            }else k++;
+        }
+
+        List<Integer> res = new ArrayList<>();
+        for(int i=0; i<nums.length; i++){
+            if(i+1 != nums[i]) {
+                res.add(nums[i]);
+                res.add(i+1);
+            }
+        }
+
+        int[] arr = new int[res.size()];
+        for (int i = 0; i < res.size(); i++) {
+            arr[i] = res.get(i);
+        }
+
+        return arr;
+    }
+
+    void swap(int[] arr, int f, int s){
+        int t = arr[f];
+        arr[f] = arr[s];
+        arr[s] = t;
+    }
+}
+```
+---
+## 77. [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) (41)
+#array #cyclicSort 
+
+```java
+class Solution {
+    public int firstMissingPositive(int[] nums) {
+        int k = 0;
+        while(k<nums.length){
+            int cInd = nums[k]-1;
+            if(cInd >= nums.length || cInd < 0) {
+                k++;
+                continue;
+            }
+            if(nums[k] != nums[cInd]){
+                swap(nums, k, cInd);
+            }else k++;
+        }
+
+        for(int i=0; i<nums.length; i++){
+            if(i+1 != nums[i]) return i+1;
+        }
+
+        return nums.length+1;
+    }
+
+    void swap(int[] arr, int f, int s){
+        int t = arr[f];
+        arr[f] = arr[s];
+        arr[s] = t;
+    }
+}
+```
+---
+## 78. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

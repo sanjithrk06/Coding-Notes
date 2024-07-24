@@ -2,6 +2,12 @@
 
 ---
 
+## Day 37
+**Date : 24.07.24**
+
+- Solving Leetcode Problems.
+- Learned Sorting in Java.
+---
 ## Day 36
 **Date : 23.07.24**
 
