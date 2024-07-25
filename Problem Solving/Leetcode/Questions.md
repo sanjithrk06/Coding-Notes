@@ -2234,7 +2234,35 @@ class Solution {
 }
 ```
 ---
-## 78. 
+## 78. [Neither Minimum nor Maximum](https://leetcode.com/problems/neither-minimum-nor-maximum/) 
+#array 
+
+```java
+class Solution {
+    public int findNonMinOrMax(int[] nums) {
+        if(nums.length==2||nums.length==1)return -1;
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+        int n = 0;
+        for(int i = 0;i<nums.length;i++){
+            max = Math.max(max,nums[i]);
+            min = Math.min(min,nums[i]);
+
+        }
+        
+        for(int j = 0;j<nums.length;j++){
+            if(nums[j]!=min&&nums[j]!=max){
+                n = nums[j];
+
+            }
+        }
+      
+        return n;
+    }
+}
+```
+---
+## 79. 
 
 
 

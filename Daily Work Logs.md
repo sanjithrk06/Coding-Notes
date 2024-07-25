@@ -2,6 +2,12 @@
 
 ---
 
+## Day 38
+**Date : 25.07.24**
+
+- Solving Leetcode Problems.
+- Learnt docker concepts.
+---
 ## Day 37
 **Date : 24.07.24**
 
