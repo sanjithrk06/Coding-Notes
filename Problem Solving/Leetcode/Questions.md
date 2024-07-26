@@ -2262,13 +2262,75 @@ class Solution {
 }
 ```
 ---
-## 79. 
+## 79. [Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/)
+#database #sql
 
+```SQL
+SELECT product_id from Products WHERE low_fats = 'Y' AND recyclable = 'Y'
+```
 
+---
+## 80. [Find Customer Referee](https://leetcode.com/problems/find-customer-referee/)
+#database #sql 
 
+```SQL
+SELECT name FROM Customer
+WHERE referee_id != 2 OR referee_id is null
+ORDER BY name;
+```
 
+---
+## 81. [Big Countries](https://leetcode.com/problems/big-countries/)
+#database #sql 
 
+```SQL
+SELECT name, population, area from World
+WHERE population >= 25000000 OR area >= 3000000
+ORDER BY name;
+```
 
+---
+## 82. [Article Views I](https://leetcode.com/problems/article-views-i/)
+#database #sql 
+
+```SQL
+SELECT DISTINCT author_id as id from Views
+WHERE author_id = viewer_id
+ORDER BY id;
+```
+
+---
+## 83. [Invalid Tweets](https://leetcode.com/problems/invalid-tweets/)
+#database #sql 
+
+```SQL
+SELECT tweet_id FROM Tweets
+WHERE LENGTH(content) > 15;
+```
+
+---
+## 84. [Replace Employee ID With The Unique Identifier](https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier/)
+#database #sql 
+
+```sql
+SELECT EmployeeUNI.unique_id, Employees.name 
+FROM Employees
+LEFT JOIN EmployeeUNI 
+ON EmployeeUNI.id = Employees.id;
+```
+
+---
+## 85. [Product Sales Analysis I](https://leetcode.com/problems/product-sales-analysis-i/)
+#database #sql 
+
+```sql
+SELECT Product.product_name, Sales.year, Sales.price 
+FROM Sales
+INNER JOIN Product
+ON Product.product_id = Sales.product_id;
+```
+
+---
 
 
 
