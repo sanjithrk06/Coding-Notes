@@ -2,6 +2,21 @@
 
 ---
 
+## Day 41
+**Date : 28.07.24**
+
+- Solving Leetcode SQL Problems.
+---
+## Day 40
+**Date : 27.07.24**
+
+- Solving Leetcode SQL Problems.
+---
+## Day 39
+**Date : 26.07.24**
+
+- Solving Leetcode SQL Problems.
+---
 ## Day 38
 **Date : 25.07.24**
 
