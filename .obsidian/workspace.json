@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tech Notes/Java + DSA/Recursion/Recursion.md",
+                "file": "Problem Solving/Leetcode/Questions.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "c3edeb35c86465be",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tech Notes/Java + DSA/Recursion/Recursion.md",
+                "file": "Problem Solving/Leetcode/Questions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tech Notes/Java + DSA/Recursion/Recursion.md",
+                "file": "Problem Solving/Leetcode/Questions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tech Notes/Java + DSA/Recursion/Recursion.md"
+                "file": "Problem Solving/Leetcode/Questions.md"
               }
             }
           }
@@ -148,11 +147,11 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "d1385535796fa661",
+  "active": "929782df0b6232f2",
   "lastOpenFiles": [
+    "Tech Notes/Java + DSA/Recursion/Recursion.md",
     "Tech Notes/Java + DSA/Recursion",
     "Problem Solving/Leetcode/Questions.md",
-    "Tech Notes/Java + DSA/Recursion/Recursion.md",
     "Tech Notes/Java + DSA/Sorting/Selection sort.md",
     "Problem Solving/PS/Companies Summary.md",
     "Projects/Ezlil/Routes.md",
@@ -192,7 +191,6 @@
     "attachments/Pasted image 20240711114526.png",
     "AWS",
     "Problem Solving/PS/Level 5",
-    "Problem Solving/PS",
-    "Problem Solving/PS Lvl 5"
+    "Problem Solving/PS"
   ]
 }

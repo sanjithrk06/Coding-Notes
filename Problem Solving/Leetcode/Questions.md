@@ -2344,7 +2344,68 @@ GROUP BY v.customer_id
 ```
 
 ---
-## 87. 
+## 87. [Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/) (1342)
+#recursion 
+
+```java
+class Solution {
+    public int numberOfSteps(int num) {
+        return helper(num, 0);
+    }
+
+    int helper(int n, int cnt){
+        if(n==0) return cnt;
+        return (n%2 == 0) ? helper(n/2, ++cnt) : helper(n-1, ++cnt);
+    }
+}
+```
+
+---
+## 88. [Binary Search](https://leetcode.com/problems/binary-search/)(704)
+#recursion #binarySearch 
+
+```java
+class Solution {
+    public int search(int[] nums, int target) {
+        int len = nums.length;
+        if(len==1) return (nums[0] == target) ? 0 : -1;
+
+        return bs(nums, 0, len-1, target);
+    }
+
+    int bs(int[] nums, int s, int e, int t) {
+        if (s > e) return -1; 
+
+        int mid = s + (e-s)/2;
+        if(nums[mid] < t) return bs(nums, mid+1, e, t);
+        else if(nums[mid] > t) return bs(nums, s, mid-1, t);
+        else return mid;
+    }
+}
+```
+
+---
+## 89. [Pow(x, n)](https://leetcode.com/problems/powx-n/) (50)
+#math 
+
+```java
+class Solution {
+    public double myPow(double x, int n) {
+        if(n<0) return 1/pow(x, n*-1);
+        return pow(x, n);
+    }
+
+    double pow(double x, int n){
+        if(n==0) return 1.00;
+        double half = pow(x, n/2);
+        if(n%2 == 0) return half * half;
+        else return x*half*half;
+    }
+}
+```
+
+---
+## 90. 
 
 
 

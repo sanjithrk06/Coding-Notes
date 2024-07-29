@@ -2,6 +2,12 @@
 
 ---
 
+## Day 42
+**Date : 29.07.24**
+
+- Solving Leetcode Problems.
+- Learnt recursion concept.
+---
 ## Day 41
 **Date : 28.07.24**
 
