@@ -2,6 +2,11 @@
 
 ---
 
+## Day 43
+**Date : 30.07.24**
+
+- Solving Leetcode SQL Problems.
+---
 ## Day 42
 **Date : 29.07.24**
 
