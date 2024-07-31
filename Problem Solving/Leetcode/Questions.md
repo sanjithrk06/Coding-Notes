@@ -2413,7 +2413,29 @@ select a1.machine_id, round(avg(a2.timestamp-a1.timestamp), 3) as processing_tim
 ```
 
 ---
-## 91. 
+## 91. [Jump Game](https://leetcode.com/problems/jump-game/) (55)
+#array 
+
+```java
+class Solution {
+    public boolean canJump(int[] nums) {
+        int t=0;
+
+        for(int i=0; i<nums.length; i++){
+            if(i > t) return false;
+            t = Math.max(t, i+nums[i]);
+            if(t >= nums.length-1) return true;
+        }
+
+        return t >= nums.length-1;
+    }
+}
+```
+
+---
+## 92. 
+
+
 
 
 

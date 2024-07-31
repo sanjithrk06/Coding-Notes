@@ -2,6 +2,12 @@
 
 ---
 
+## Day 44
+**Date : 31.07.24**
+
+- Solving Leetcode Problems.
+- Updating the recipe maker website.
+---
 ## Day 43
 **Date : 30.07.24**
 
