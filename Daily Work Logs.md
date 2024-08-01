@@ -2,6 +2,12 @@
 
 ---
 
+## Day 45
+**Date : 01.08.24**
+
+- Solving Leetcode Problems.
+- Learned the quick sort algo.
+---
 ## Day 44
 **Date : 31.07.24**
 

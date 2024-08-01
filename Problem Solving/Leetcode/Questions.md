@@ -2433,8 +2433,76 @@ class Solution {
 ```
 
 ---
-## 92. 
+## 92. [Number of Senior Citizens](https://leetcode.com/problems/number-of-senior-citizens/) (2678)
+#array #string 
 
+```java
+class Solution {
+    public int countSeniors(String[] details) {
+        int cnt = 0;
+        for(int i=0; i<details.length; i++){
+            int d1 = (details[i].charAt(11)-'0')*10;
+            int d2 = details[i].charAt(12)-'0';
+            int age = d1+d2;
+            if(age > 60) cnt++;
+        }
+
+        return cnt;
+    }
+}
+```
+
+---
+## 93. [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) (215)
+#array #sorting #quickSort
+
+```java
+class Solution {
+    public int findKthLargest(int[] nums, int k) {
+        return quickSelect(nums, k, 0, nums.length - 1);
+    }
+
+    int quickSelect(int[] nums, int k, int low, int high) {
+        int index = partition(nums, low, high);
+        if (index == nums.length - k) {
+            return nums[index];
+        } else if (index > nums.length - k) {
+            return quickSelect(nums, k, low, index - 1);
+        } else {
+            return quickSelect(nums, k, index + 1, high);
+        }
+    }
+
+    int partition(int[] arr, int low, int high) {
+        if(low==high) return low;
+        
+        int pivot = arr[low];
+        int s = low + 1;
+        int e = high;
+
+        while (s <= e) {
+            while (s <= high && arr[s] <= pivot) s++;
+            while (e >= low && arr[e] > pivot) e--;
+
+            if (s < e) {
+                swap(arr, s, e);
+            }
+        }
+
+        swap(arr, low, e);
+        return e;
+    }
+
+    void swap(int[] arr, int f, int s) {
+        int temp = arr[f];
+        arr[f] = arr[s];
+        arr[s] = temp;
+    }
+}
+```
+
+---
+## 94. 
 
 
 

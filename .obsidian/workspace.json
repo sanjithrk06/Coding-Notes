@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Tech Notes/Java + DSA/Sorting/Selection sort.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "73d0a10e0b26a912",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Problem Solving/Leetcode/Questions.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -147,12 +160,13 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "929782df0b6232f2",
+  "active": "73d0a10e0b26a912",
   "lastOpenFiles": [
+    "Tech Notes/Java + DSA/Sorting/Quick Sort.md",
+    "Tech Notes/Java + DSA/Sorting/Selection sort.md",
+    "Problem Solving/Leetcode/Questions.md",
     "Tech Notes/Java + DSA/Recursion/Recursion.md",
     "Tech Notes/Java + DSA/Recursion",
-    "Problem Solving/Leetcode/Questions.md",
-    "Tech Notes/Java + DSA/Sorting/Selection sort.md",
     "Problem Solving/PS/Companies Summary.md",
     "Projects/Ezlil/Routes.md",
     "Docker/Introduction to Docker.md",
