@@ -2,6 +2,11 @@
 
 ---
 
+## Day 46
+**Date : 02.08.24**
+
+- Solving Leetcode Problems.
+---
 ## Day 45
 **Date : 01.08.24**
 

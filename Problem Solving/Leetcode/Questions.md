@@ -2502,9 +2502,130 @@ class Solution {
 ```
 
 ---
-## 94. 
+## 94. [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) (167)
+#array #twoPointer 
 
+```java
+class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+        int l = 0, r = numbers.length-1;
 
+        while(l<=r){
+            if(numbers[l] + numbers[r] == target) return new int[]{l+1, r+1};
+            else if(numbers[l] + numbers[r] > target) r--;
+            else l++;
+        }
+
+        return new int[]{-1, -1};
+    }
+}
+```
+
+---
+## 95. [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) (128)
+#array #hashSet 
+
+```java
+class Solution {
+    public int longestConsecutive(int[] nums) {
+        HashSet<Integer> hset = new HashSet<>();
+        
+        for(int num: nums){
+            hset.add(num);
+        }
+
+        int cnt = 1, max = 0;
+        for(int i=0; i<nums.length; i++){
+            if(!hset.contains(nums[i])) continue;
+
+            while(hset.contains(val++)){
+                cnt++;
+                hset.remove(val);
+            } 
+            
+            while(hset.contains(--val)){
+                cnt++;
+                hset.remove(val);
+            }
+
+            if(max<cnt) max = cnt;
+            cnt = 1;
+        }
+
+        return max;
+    }
+}
+```
+
+---
+## 96. [Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/) (1249)
+#string #parentheses
+
+```java
+class Solution {
+    public String minRemoveToMakeValid(String s) {
+        int flag = 0;
+        StringBuilder str = new StringBuilder();
+
+        for(int i=0; i<s.length(); i++){
+            if(s.charAt(i) == '('){
+                int j = i, f = 1;
+
+                while(++j<s.length()){
+                    if(s.charAt(j) == ')'){
+                        f--;
+                        if(f==0) break;
+                    }else if(s.charAt(j) == '(') f++;
+                }
+
+                if(f==0) flag++;
+                else continue;
+
+            }else if(s.charAt(i) == ')'){
+
+                if(flag>0) flag--;
+                else continue;
+            }
+
+            str.append(s.charAt(i));
+        }
+
+        return str.toString();
+    }
+}
+```
+
+---
+## 97.  [Sequential Digits](https://leetcode.com/problems/sequential-digits/) (1291)
+#enumeration #range
+
+```java
+class Solution {
+    public List<Integer> sequentialDigits(int low, int high) {
+        List<Integer> res = new ArrayList<>();
+        
+        for(int i=1; i<=9; i++){
+            int num = i;
+            int nxt = i+1;
+
+            while(num <= high && nxt <= 9){
+                num = num*10 + nxt;
+
+                if(low <= num && num <= high){
+                    res.add(num);
+                }
+                ++nxt;
+            }
+        }
+
+        res.sort(null);
+        return res;
+    }
+}
+```
+
+---
+## 98. 
 
 
 
