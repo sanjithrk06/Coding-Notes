@@ -2625,8 +2625,34 @@ class Solution {
 ```
 
 ---
-## 98. 
+## 98. [Make Two Arrays Equal by Reversing Subarrays](https://leetcode.com/problems/make-two-arrays-equal-by-reversing-subarrays/) (1460)
+#array #hashMap 
 
+```java
+class Solution {
+    public boolean canBeEqual(int[] target, int[] arr) {
+        HashMap<Integer, Integer> hmap = new HashMap<>();
+
+        for(int num: arr){
+            hmap.put(num, hmap.getOrDefault(num, 0) + 1);
+        }
+
+        for(int num: target){
+            if(!hmap.containsKey(num)) return false;
+            else{
+                int val = hmap.get(num);
+                if(val == 0) return false;
+                else hmap.put(num, hmap.get(num) - 1);
+            }
+        }
+
+        return true;
+    }
+}
+```
+
+---
+## 99. 
 
 
 

@@ -2,6 +2,12 @@
 
 ---
 
+## Day 47
+**Date : 03.08.24**
+
+- Solving Leetcode Problems.
+- Attended the weekly contest.
+---
 ## Day 46
 **Date : 02.08.24**
 
