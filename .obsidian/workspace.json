@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Problem Solving/Leetcode/Contest Questions.md",
+                "file": "Projects/Ezlil/Schema Design.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Problem Solving/Leetcode/Contest Questions.md",
+                "file": "Projects/Ezlil/Schema Design.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Problem Solving/Leetcode/Contest Questions.md",
+                "file": "Projects/Ezlil/Schema Design.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Problem Solving/Leetcode/Contest Questions.md"
+                "file": "Projects/Ezlil/Schema Design.md"
               }
             }
           }
@@ -174,8 +174,10 @@
   },
   "active": "5b0c797f664f0004",
   "lastOpenFiles": [
-    "Problem Solving/Leetcode/Questions.md",
+    "Projects/Ezlil/Services Required.md",
+    "Projects/Ezlil/Schema Design.md",
     "Problem Solving/Leetcode/Contest Questions.md",
+    "Problem Solving/Leetcode/Questions.md",
     "Tech Notes/Java + DSA/Sorting/Quick Sort.md",
     "Tech Notes/Java + DSA/Sorting/Selection sort.md",
     "Tech Notes/Java + DSA/Recursion/Recursion.md",
@@ -191,8 +193,6 @@
     "Tech Notes/Java + DSA/Sorting/Cyclic Sort.md",
     "Tech Notes/Java + DSA/Sorting/Insertion Sort.md",
     "Projects/Ezlil/Functionalities(Services & Controllers).md",
-    "Projects/Ezlil/Services Required.md",
-    "Projects/Ezlil/Schema Design.md",
     "Github.md",
     "Tech Notes/Git & Github/Git Init.md",
     "Tech Notes/Git & Github/Git commit & logs.md",
