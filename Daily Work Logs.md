@@ -2,6 +2,12 @@
 
 ---
 
+## Day 49
+**Date : 05.08.24**
+
+- Solving Leetcode Problems.
+- Learnt the bitwise operators in java.
+---
 ## Day 48
 **Date : 04.08.24**
 

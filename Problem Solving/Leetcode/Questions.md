@@ -2652,7 +2652,32 @@ class Solution {
 ```
 
 ---
-## 99. 
+## 99. [Kth Distinct String in an Array](https://leetcode.com/problems/kth-distinct-string-in-an-array/) (2053)
+#array #hashMap 
+
+```java
+class Solution {
+    public String kthDistinct(String[] arr, int k) {
+        HashMap<String, Integer> hmap = new HashMap<>();
+
+        for(int i=0; i<arr.length; i++){
+            hmap.put(arr[i], hmap.getOrDefault(arr[i], 0)+1);
+        }
+
+        int cnt = 0;
+        for(int i=0; i<arr.length; i++){
+            if(hmap.get(arr[i]) == 1) cnt++;
+            if(cnt == k) return arr[i];
+        }
+
+        return "";
+    }
+}
+```
+
+---
+## 100. 
+
 
 
 
