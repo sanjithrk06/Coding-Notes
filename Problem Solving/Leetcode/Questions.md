@@ -2676,8 +2676,67 @@ class Solution {
 ```
 
 ---
-## 100. 
+## 100. [Minimum Number of Pushes to Type Word II](https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-ii/) (3016)
+#string #sorting 
 
+```java
+class Solution {
+    public int minimumPushes(String word) {
+        int[] arr = new int[26];
+
+        int result = 0;
+
+        for(int i=0; i<word.length(); i++){
+            arr[word.charAt(i)-'a']++;
+        }
+        Arrays.sort(arr);
+
+        int i=arr.length-1, k=0;
+        while(i>=0 && arr[i] != 0){
+            result += arr[i] * (k/8 + 1);
+            k++;
+            i--;
+        }
+
+        return result;
+    }
+}
+```
+
+---
+## 101. [Number of Subsequences That Satisfy the Given Sum Condition](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/) (1498)
+#array #sorting #twoPointer 
+
+```java
+class Solution {
+    public int numSubseq(int[] nums, int target) {
+        Arrays.sort(nums);
+        int cnt = 0;
+        int mod = (int)Math.pow(10, 9) + 7;
+
+        int[] pow2 = new int[nums.length];
+        pow2[0] = 1;
+        for (int i = 1; i < nums.length; i++) {
+            pow2[i] = (pow2[i - 1] * 2) % mod;
+        }
+
+        int r = nums.length-1;
+        for(int l = 0; l<nums.length; l++){
+            while((l<=r) && (nums[l] + nums[r] > target)){
+                r--;
+            }
+            if(l<=r) {
+                cnt = (cnt + pow2[r - l]) % mod;
+            }
+        }
+
+        return cnt;
+    }
+}
+```
+
+---
+## 102. 
 
 
 

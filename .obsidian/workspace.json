@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tech Notes/Java + DSA/Bitwise Operators.md",
+                "file": "Problem Solving/Leetcode/Questions.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "c3edeb35c86465be",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tech Notes/Java + DSA/Bitwise Operators.md",
+                "file": "Problem Solving/Leetcode/Questions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tech Notes/Java + DSA/Bitwise Operators.md",
+                "file": "Problem Solving/Leetcode/Questions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tech Notes/Java + DSA/Bitwise Operators.md"
+                "file": "Problem Solving/Leetcode/Questions.md"
               }
             }
           }
@@ -150,8 +149,11 @@
   },
   "active": "3f95d7c97bf7c6bc",
   "lastOpenFiles": [
-    "Tech Notes/Development/Webpack.md",
+    "Tech Notes/Java + DSA/Searching/Linear Search.md",
+    "Tech Notes/Java + DSA/Searching/Interview Questions.md",
+    "Tech Notes/Java + DSA/Searching/Binary Search.md",
     "Tech Notes/Java + DSA/Bitwise Operators.md",
+    "Tech Notes/Development/Webpack.md",
     "Tech Notes/Development",
     "Problem Solving/Leetcode/Questions.md",
     "Projects/Ezlil/Schema Design.md",
@@ -179,12 +181,9 @@
     "attachments/Pasted image 20240722160703.png",
     "attachments/Pasted image 20240722151254.png",
     "attachments/Pasted image 20240722143743.png",
-    "Tech Notes/Java + DSA/Searching/Interview Questions.md",
     "Tech Notes/Git & Github",
     "Tech Notes/Java + DSA/Sorting/Bubble Sort.md",
-    "Problem Solving/PS/Level 5.md",
     "Tech Notes/Java + DSA/Sorting",
-    "Problem Solving/PS/C Programming.md",
     "Tech Notes/Java + DSA/Searching",
     "Tech Notes/Java + DSA",
     "Tech Notes",

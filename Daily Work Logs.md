@@ -2,6 +2,12 @@
 
 ---
 
+## Day 50
+**Date : 06.08.24**
+
+- Solving Leetcode Problems.
+- Setting up the routers path and folder Structure in One Trip.
+---
 ## Day 49
 **Date : 05.08.24**
 

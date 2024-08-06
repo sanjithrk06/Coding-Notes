@@ -52,3 +52,16 @@ $$10<<1 = (1010)_2 = (10100)_2 = 20$$
 2. Any Base to Decimal
 	Multiply and add the power of base with digit.$$(100101)_2 = (1*2^5) + (0*2^4) + (0*2^3) + (1*2^2) + (0*2^1) + (1*2^0) = (37)_10$$-Here base 10 represents the decimal number.
 
+
+
+## Questions
+
+### Q1. Find a number is even or odd?
+#and 
+
+- Last number in Binary representation of the number is 1 means odd or 0 means even.
+**==`Note :`==** $num (and) 1 = num (1 or 0)$
+==**`Logic :`**==
+```Java
+(num & 1 == 0) ? even : odd 
+```
