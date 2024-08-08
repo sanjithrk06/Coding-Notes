@@ -2736,8 +2736,101 @@ class Solution {
 ```
 
 ---
-## 102. 
+## 102. [Integer to English Words](https://leetcode.com/problems/integer-to-english-words/) (273)
+#string #stringBuilder
 
+```java
+class Solution {
+    private HashMap<Integer, String> ones = new HashMap<>(){
+        {
+            put(1, "One");
+            put(2, "Two");
+            put(3, "Three");
+            put(4, "Four");
+            put(5, "Five");
+            put(6, "Six");
+            put(7, "Seven");
+            put(8, "Eight");
+            put(9, "Nine");
+            put(10, "Ten");
+            put(11, "Eleven");
+            put(12, "Twelve");
+            put(13, "Thirteen");
+            put(14, "Fourteen");
+            put(15, "Fifteen");
+            put(16, "Sixteen");
+            put(17, "Seventeen");
+            put(18, "Eighteen");
+            put(19, "Nineteen");
+        }
+    };
+
+    private HashMap<Integer, String> tens = new HashMap<>(){
+        {
+            put(20, "Twenty");
+            put(30, "Thirty");
+            put(40, "Forty");
+            put(50, "Fifty");
+            put(60, "Sixty");
+            put(70, "Seventy");
+            put(80, "Eighty");
+            put(90, "Ninety");
+        }
+    };
+
+    public String numberToWords(int n) {
+        if(n==0) return "Zero";
+
+        StringBuilder str = new StringBuilder();
+        String[] postFix = {"", " Thousand", " Million", " Billion"};
+        int digit = 0, i=0;
+        while(n>0){
+            digit = n%1000;
+            if(digit!=0) {
+                if (str.isEmpty()) {
+                    str.append(getString(digit)).append(postFix[i]);
+                } else {
+                    String old = str.toString();
+                    str.delete(0, str.length());
+                    str.append(getString(digit)).append(postFix[i]).append(" ").append(old);
+                }
+            }
+            i++;
+            n = n / 1000;
+        }
+
+        return str.toString().trim();       
+    }
+
+    String getString(int n){
+        StringBuilder str = new StringBuilder();
+        
+        int hundreds = n/100;
+
+        if(hundreds>0) str.append(ones.get(hundreds)).append(" Hundred");
+
+        int last_2 = n%100;
+
+        if(last_2>=20) {
+            int first = last_2 / 10;
+            int sec = last_2 % 10;
+            if(hundreds>0) str.append(" ");
+            str.append(tens.get(first*10));
+            if(sec!=0) str.append(" ").append(ones.get(sec));
+            System.out.println(first);
+        }
+        else if(last_2>0){
+            if(hundreds>0) str.append(" ");
+            str.append(ones.get(last_2));
+        }
+
+        return str.toString();
+    }
+}
+```
+
+---
+## 103. 
 
 
 
