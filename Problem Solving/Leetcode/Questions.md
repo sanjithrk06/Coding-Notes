@@ -2830,8 +2830,33 @@ class Solution {
 ```
 
 ---
-## 103. 
+## 103. [Minimum Number of Steps to Make Two Strings Anagram](https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/) (1347)
+#string #anagram 
 
+```Java
+class Solution {
+    public int minSteps(String s, String t) {
+        HashMap<Character, Integer> hmap = new HashMap<>();
+
+        for(int i=0; i<s.length(); i++){
+            hmap.put(s.charAt(i), hmap.getOrDefault(s.charAt(i), 0) + 1);
+        }
+
+        int cnt = 0;
+        for(int i=0; i<t.length(); i++){
+            if(hmap.containsKey(t.charAt(i))){
+                hmap.put(t.charAt(i), hmap.get(t.charAt(i)) - 1);
+                if(hmap.get(t.charAt(i)) == 0) hmap.remove(t.charAt(i));
+            }else cnt++;
+        }
+
+        return cnt;
+    }
+}
+```
+
+---
+## 104. 
 
 
 

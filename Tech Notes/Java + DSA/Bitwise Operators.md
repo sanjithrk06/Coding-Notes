@@ -60,8 +60,44 @@ $$10<<1 = (1010)_2 = (10100)_2 = 20$$
 #and 
 
 - Last number in Binary representation of the number is 1 means odd or 0 means even.
-**==`Note :`==** $num (and) 1 = num (1 or 0)$
-==**`Logic :`**==
+**==`Note`==** $num (and) 1 = num (1 or 0)$
+==**`Logic`**==
 ```Java
 (num & 1 == 0) ? even : odd 
 ```
+==`Code`==
+```Java
+public static void main(String[] args){  
+    Scanner in = new Scanner(System.in);  
+    int number = in.nextInt();  
+  
+    if((number & 1) == 0) System.out.printf("%d is an even number", number);  
+    else System.out.printf("%d is a odd number", number);  
+}
+```
+
+### Q2. Find the unique number in an array
+#xor
+- [[Bitwise Operators#(iii) XOR Operator (if and only if) ( ) | Refer XOR Operators]].
+==`Note`== $num(xor)num = 0$
+==`Logic`==
+```Java
+for(int num: arr){
+	unique ^= num;
+}
+```
+==`Code`==
+```Java
+private static int uniques(int[] arr) {  
+    int unique = 0;  
+  
+    for(int num: arr){  
+        unique ^= num;  
+    }  
+  
+    return unique;  
+}
+```
+
+### Q3. Find the $ith$ bit of a number
+#and #leftShift

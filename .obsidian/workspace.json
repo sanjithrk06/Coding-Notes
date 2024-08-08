@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "de2350279cfc4279",
+        "id": "08d69a04b3b87152",
         "type": "tabs",
         "children": [
           {
-            "id": "3f95d7c97bf7c6bc",
+            "id": "2559e6472659b996",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "#bina",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -147,15 +147,15 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "3f95d7c97bf7c6bc",
+  "active": "2559e6472659b996",
   "lastOpenFiles": [
+    "Tech Notes/Java + DSA/Bitwise Operators.md",
+    "Problem Solving/Leetcode/Questions.md",
     "Tech Notes/Java + DSA/Searching/Linear Search.md",
     "Tech Notes/Java + DSA/Searching/Interview Questions.md",
     "Tech Notes/Java + DSA/Searching/Binary Search.md",
-    "Tech Notes/Java + DSA/Bitwise Operators.md",
     "Tech Notes/Development/Webpack.md",
     "Tech Notes/Development",
-    "Problem Solving/Leetcode/Questions.md",
     "Projects/Ezlil/Schema Design.md",
     "Projects/Ezlil/Services Required.md",
     "Problem Solving/Leetcode/Contest Questions.md",
