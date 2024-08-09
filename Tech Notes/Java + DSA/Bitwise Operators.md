@@ -101,3 +101,33 @@ private static int uniques(int[] arr) {
 
 ### Q3. Find the $ith$ bit of a number
 #and #leftShift
+
+==`Logic`==
+```Java
+num & (1<<(i-1))
+
+//Input num = 101101 i=3
+//Output 1
+```
+
+### Q4. Set the $ith$ bit of a binary to 1
+#or #leftShift 
+
+==`Logic`==
+```Java
+num | (1<<(i-1))
+```
+
+
+### Q5. Reset $ith$ bit (i.e. make it 0)
+
+==`Logic`==
+```Java
+num & ~(1<<(i-1))
+```
+
+
+### Q6. Find the position of the right most set bit
+
+- From right hand side, check each number , the occurrence of 1 is the set bit.
+

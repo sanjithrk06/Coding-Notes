@@ -2,6 +2,12 @@
 
 ---
 
+## Day 53
+**Date : 09.08.24**
+
+- Solving Leetcode Problems.
+- Starting the compiler project.
+---
 ## Day 52
 **Date : 08.08.24**
 

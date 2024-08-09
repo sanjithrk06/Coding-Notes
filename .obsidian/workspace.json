@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "08d69a04b3b87152",
+        "id": "122fc59c3b04b32f",
         "type": "tabs",
         "children": [
           {
-            "id": "2559e6472659b996",
+            "id": "3cd453c570e233ff",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Problem Solving/Leetcode/Questions.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Problem Solving/Leetcode/Questions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Problem Solving/Leetcode/Questions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Problem Solving/Leetcode/Questions.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -147,10 +139,14 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "2559e6472659b996",
+  "active": "3cd453c570e233ff",
   "lastOpenFiles": [
     "Tech Notes/Java + DSA/Bitwise Operators.md",
+    "Docker/Introduction to Docker.md",
+    "Docker/Docker Image.md",
+    "Docker/Docker cmd's.md",
     "Problem Solving/Leetcode/Questions.md",
+    "Tech Notes/Development/React Coding Standards.md",
     "Tech Notes/Java + DSA/Searching/Linear Search.md",
     "Tech Notes/Java + DSA/Searching/Interview Questions.md",
     "Tech Notes/Java + DSA/Searching/Binary Search.md",
@@ -165,9 +161,6 @@
     "Tech Notes/Java + DSA/Recursion",
     "Problem Solving/PS/Companies Summary.md",
     "Projects/Ezlil/Routes.md",
-    "Docker/Introduction to Docker.md",
-    "Docker/Docker Image.md",
-    "Docker/Docker cmd's.md",
     "attachments/Pasted image 20240725142821.png",
     "Docker",
     "Tech Notes/Java + DSA/Sorting/Cyclic Sort.md",
@@ -182,7 +175,6 @@
     "attachments/Pasted image 20240722151254.png",
     "attachments/Pasted image 20240722143743.png",
     "Tech Notes/Git & Github",
-    "Tech Notes/Java + DSA/Sorting/Bubble Sort.md",
     "Tech Notes/Java + DSA/Sorting",
     "Tech Notes/Java + DSA/Searching",
     "Tech Notes/Java + DSA",
